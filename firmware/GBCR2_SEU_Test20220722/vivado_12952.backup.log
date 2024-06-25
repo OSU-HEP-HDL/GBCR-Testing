@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Apr 28 10:48:07 2022
+# Process ID: 12952
+# Current directory: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13460 D:\xilinxtrain\GBCR2\GBCR2_SEU_Test20220423\GBCR2_SEU_Test.xpr
+# Log file: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/vivado.log
+# Journal file: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.xpr
+INFO: [Project 1-313] Project file moved from 'D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'tri_mode_ethernet_mac_0' is locked:
+* IP definition 'Tri Mode Ethernet MAC (9.0)' for IP 'tri_mode_ethernet_mac_0' (customized with software release 2018.3) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-5178] IP tri_mode_ethernet_mac_0 will not be generated with lower license level. If you would like to generate with the current available license levels, please reset and regenerate.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1007.566 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo32to8'...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP fifo32to8, cache-ID = e01f50894b68a241.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/ipcore_dir/fifo32to8/fifo32to8.xci' is already up-to-date
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo8to32'...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP fifo8to32, cache-ID = 0c1dad0205feb4c4.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/ipcore_dir/fifo8to32/fifo8to32.xci' is already up-to-date
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clockwiz'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clockwiz'...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP clockwiz, cache-ID = e7147842ac077e68.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/ipcore_dir/clockwiz/clockwiz.xci' is already up-to-date
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'vio_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_128to32_depth16k'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo36x512'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gtwizard_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'gtwizard_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fifo_128to128_depth1k'...
+WARNING: [Project 1-576] IP 'D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/ipcore_dir/tri_mode_ethernet_mac_0/tri_mode_ethernet_mac_0.xci' in run tri_mode_ethernet_mac_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+[Thu Apr 28 10:49:22 2022] Launched tri_mode_ethernet_mac_0_synth_1, vio_0_synth_1, fifo_128to32_depth16k_synth_1, fifo36x512_synth_1, gtwizard_0_synth_1, fifo_128to128_depth1k_synth_1, synth_1...
+Run output will be captured here:
+tri_mode_ethernet_mac_0_synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/tri_mode_ethernet_mac_0_synth_1/runme.log
+vio_0_synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/vio_0_synth_1/runme.log
+fifo_128to32_depth16k_synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/fifo_128to32_depth16k_synth_1/runme.log
+fifo36x512_synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/fifo36x512_synth_1/runme.log
+gtwizard_0_synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/gtwizard_0_synth_1/runme.log
+fifo_128to128_depth1k_synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/fifo_128to128_depth1k_synth_1/runme.log
+synth_1: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/synth_1/runme.log
+[Thu Apr 28 10:49:23 2022] Launched impl_1...
+Run output will be captured here: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 1007.566 ; gain = 0.000
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+Warning: Cannot create '3002:microblaze' GDB server: 
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1007.566 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203336139A
+set_property PROGRAM.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1435] Device xc7k325t (JTAG device index = 0) is not programmed (DONE status = 0).
+create_hw_cfgmem -hw_device [get_hw_devices xc7k325t_0] -mem_dev [lindex [get_cfgmem_parts {28f00ap30t-bpi-x16}] 0]
+set_property PROBES.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2508.641 ; gain = 0.223
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property PROBES.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.runs/impl_1/GBCR2_SEU_Test.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2554.902 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+close_hw_manager

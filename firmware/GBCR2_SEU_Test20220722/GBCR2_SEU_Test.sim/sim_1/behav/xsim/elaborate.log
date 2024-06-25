@@ -1,0 +1,42 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 26c2cd1221624eb1818561d038fce866 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Data_Checker_tb_behav xil_defaultlib.Data_Checker_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'prbs7DataERROR' [D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker.v:101]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 17 for port 'rd_data_count' [D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Aggregator.v:183]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PRBS31Gen32b
+Compiling module xil_defaultlib.DataX0Y3
+Compiling module xil_defaultlib.Data_Source_default
+Compiling module xil_defaultlib.CRC32_8gen
+Compiling module xil_defaultlib.CRC32gen_default
+Compiling module xil_defaultlib.PRBS31_Seed_Checker
+Compiling module xil_defaultlib.SearchSamplePoint
+Compiling module xil_defaultlib.ila_3
+Compiling module xil_defaultlib.dataPrbs7Check_default
+Compiling module xil_defaultlib.PRBS7Gen32b
+Compiling module xil_defaultlib.SER32b
+Compiling module xil_defaultlib.DESER32b
+Compiling module xil_defaultlib.Tx_PRBS7_Data_Checker
+Compiling module xil_defaultlib.Data_generator_160M
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_sync_stag...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module xil_defaultlib.fifo_128to128_depth1k
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_sync_stag...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_sync_stag...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module xil_defaultlib.fifo_128to32_depth16k
+Compiling module xil_defaultlib.Data_Aggregator_default
+Compiling module xil_defaultlib.Data_Checker_default
+Compiling module xil_defaultlib.Data_Checker_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Data_Checker_tb_behav

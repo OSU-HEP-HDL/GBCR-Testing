@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to128_depth1k/sim/fifo_128to128_depth1k.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to32_depth16k/sim/fifo_128to32_depth16k.v" \
+"../../../../../../GBCR2_SEU_20211220_7RX/GBCR2_SEU_Test.ip_user_files/ip/ila_3/sim/ila_3.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/new/CRC32_8gen.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/new/CRC32gen.v" \
+"../../../../src/DESER32b.v" \
+"../../../../src/DataX0Y3.v" \
+"../../../../src/Data_Aggregator.v" \
+"../../../../src/Data_Checker.v" \
+"../../../../src/Data_Source.v" \
+"../../../../src/Data_generator_160M.v" \
+"../../../../src/PRBS31Gen32b.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/new/PRBS31_Seed_Checker.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/new/PRBS7Gen32b.v" \
+"../../../../src/SER32b.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/new/SearchSamplePoint.v" \
+"../../../../GBCR2_SEU_Test.srcs/sources_1/new/Tx_PRBS7_Data_Checker.v" \
+"../../../../src/dataPrbs7Check.v" \
+"../../../../src/Data_Checker_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

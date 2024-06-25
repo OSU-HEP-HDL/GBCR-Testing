@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jul 22 11:18:38 2022
+# Process ID: 15452
+# Current directory: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10056 D:\xilinxtrain\GBCR2\GBCR2_SEU_Test20220423\GBCR2_SEU_Test.xpr
+# Log file: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/vivado.log
+# Journal file: D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220423/GBCR2_SEU_Test.xpr
+update_compile_order -fileset sources_1
+reset_project

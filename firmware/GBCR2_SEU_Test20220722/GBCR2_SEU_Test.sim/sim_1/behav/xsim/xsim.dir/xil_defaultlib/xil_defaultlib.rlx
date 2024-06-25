@@ -1,0 +1,24 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to128_depth1k/sim/fifo_128to128_depth1k.v,1650691792,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to32_depth16k/sim/fifo_128to32_depth16k.v,,fifo_128to128_depth1k,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to32_depth16k/sim/fifo_128to32_depth16k.v,1650691792,verilog,,D:/xilinxtrain/GBCR2_SEU_20211220_7RX/GBCR2_SEU_Test.ip_user_files/ip/ila_3/sim/ila_3.v,,fifo_128to32_depth16k,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/CRC32_8gen.v,1650276989,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/CRC32gen.v,,CRC32_8gen,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/CRC32gen.v,1650455648,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/DESER32b.v,,CRC32gen,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/PRBS31_Seed_Checker.v,1650525452,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/PRBS7Gen32b.v,,PRBS31_Seed_Checker,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/PRBS7Gen32b.v,1649943968,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/SER32b.v,,PRBS7Gen32b,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/SearchSamplePoint.v,1650688231,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/Tx_PRBS7_Data_Checker.v,,SearchSamplePoint,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/Tx_PRBS7_Data_Checker.v,1650525486,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/dataPrbs7Check.v,,Tx_PRBS7_Data_Checker,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/DESER32b.v,1603999382,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/DataX0Y3.v,,DESER32b,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/DataX0Y3.v,1649945303,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Aggregator.v,,DataX0Y3,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Aggregator.v,1650126550,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker.v,,Data_Aggregator,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker.v,1650699159,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Source.v,,Data_Checker,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker_tb.v,1649856456,verilog,,,,Data_Checker_tb,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Source.v,1649947101,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_generator_160M.v,,Data_Source,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_generator_160M.v,1650451853,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/PRBS31Gen32b.v,,Data_generator_160M,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/PRBS31Gen32b.v,1650033107,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/PRBS31_Seed_Checker.v,,PRBS31Gen32b,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/SER32b.v,1603847724,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/SearchSamplePoint.v,,SER32b,,,,,,,,
+D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/dataPrbs7Check.v,1650691780,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker_tb.v,,dataPrbs7Check,,,,,,,,
+D:/xilinxtrain/GBCR2_SEU_20211220_7RX/GBCR2_SEU_Test.ip_user_files/ip/ila_3/sim/ila_3.v,1650707118,verilog,,D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/CRC32_8gen.v,,ila_3,,,,,,,,
