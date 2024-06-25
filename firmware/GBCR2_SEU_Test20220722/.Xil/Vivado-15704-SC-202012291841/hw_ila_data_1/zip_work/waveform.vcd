@@ -1,0 +1,25 @@
+$date
+        2022-Apr-15 19:37:59
+$end
+$version
+        Vivado v2020.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 256 " Data_Checker_Inst/data_aggregator_inst/din [255:0] $end
+$var reg 1 f# _TRIGGER $end
+$var reg 1 g# _WINDOW $end
+$var reg 1 h# _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11110001011100011111000101110000000000000000000000000000000000000000000000000000000000000000000001001000110100010000110010000101111101011011010111101001011010000000000000000000000000000000000000000000000000000000000000000001010101011001100110011001010101 "
+0f#
+1g#
+0h#
+$end
+#1024
+1f#
