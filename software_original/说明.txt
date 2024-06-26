@@ -1,0 +1,14 @@
+python_forGBCR2_SEU_Test256bCRC32V5.0_single
+
+对应固件为：GBCR2_SEU_Test20220423_256bV5.0.zip
+在上一封邮件中。
+
+这个single 是单线程python 版。
+比多线程版速度更快。
+
+add iic read and IDD read
+verified. 
+
+
+update:  20220504
+deleted thread, i.e.  no thread!
