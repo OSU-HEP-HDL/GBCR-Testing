@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+from genericpath import exists
 import os
 import sys
 import copy
@@ -40,12 +41,12 @@ def main():
     userdefinedir = "GBCR2_SEE_Test"
     userdefinedir_log = "%s_log" % userdefinedir
 
-    today = datetime.date.today()
+    ### today = datetime.date.today()
     # TimeD = time.localtime()
-    TimeD = time.strftime("%H-%M-%S", time.localtime())
+    ### TimeD = time.strftime("%H-%M-%S", time.localtime())
     # todaystr = today.isoformat() + "-" + TimeD + "_Results"
     todaystr = "QAResults"
-    timestr = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
+    ### timestr = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     try:
         os.mkdir(todaystr)
         print("Directory %s was created!" % todaystr)
@@ -53,18 +54,64 @@ def main():
         print("Directory %s already exists!" % todaystr)
     # userdefine_dir = todaystr + "./%s"%userdefinedir
     # userdefine_dir = todaystr + "./%s/"%userdefinedir + TimeD
-    # userdefine_dir = todaystr + "./" + timestr
-    userdefine_dir = todaystr + "/" + timestr
+    ### userdefine_dir = todaystr + "./" + timestr
+    userdefine_dir = todaystr + '/' + input("Enter chip ID:")
     try:
         os.mkdir(userdefine_dir)
     except FileExistsError:
         print("User define directories already created!!!")
 
-    num_file = int(sys.argv[1])  # total files will be read back
+    for f in os.listdir(userdefine_dir):
+        os.remove(os.path.join(userdefine_dir, f))
+
+    ### num_file = int(sys.argv[1])  # total files will be read back
+    num_file = 60
     store_dict = userdefine_dir
     # 20220428 dbw for single #queue = Queue()  # define a queue
     # 20220428 #receive_data = Receive_data('Receive_data', queue, num_file)  # initial receive_data class
     Receive_data(store_dict, num_file)
+
+    err_flag = 0
+    ch_flag = 0
+
+    for ch_id in range(9):
+        ch_file = userdefine_dir + '/Ch' + str(ch_id) + '.txt'
+        # print(ch_file)
+        globals()['err_diff_len%s' % ch_id] = 0
+        if exists(ch_file):
+            globals()['err_diff%s' % ch_id] = []
+            # print('Ch', ch_id, 'exists.')
+            with open("./%s/Ch%d.TXT" % (store_dict, ch_id),
+                'r') as f:  # # 'a': add, will not cover previous infor
+                contents = f.readlines()
+            f.close()
+            for line in contents:
+                line_data = line.split()
+                globals()['err_diff%s' % ch_id] += [int(line_data[4]) - int(line_data[3])]
+                # print(globals()['err_diff%s' % ch_id])
+                globals()['err_diff_len%s' % ch_id] = globals()['err_diff_len%s' % ch_id] + 1
+        else:
+            print('Ch', ch_id,'does not exist! Please check!')
+            ch_flag = ch_flag + 1
+
+        if  globals()['err_diff_len%s' % ch_id]>= 3:
+            if (globals()['err_diff%s' % ch_id][0] == globals()['err_diff%s' % ch_id][1]) & (globals()['err_diff%s' % ch_id][1] == globals()['err_diff%s' % ch_id][2]):
+                err_flag = err_flag
+                #print('\nch', ch_id,' test PASS!')
+            else:
+                err_flag = err_flag + 1
+                print('\nch', ch_id, 'has Error detected!!!!!\n')
+        else: 
+            print('\nch', ch_id, 'needs more data!!!','Currently data length is', globals()['err_diff_len%s' % ch_id], '\n')
+
+
+    if ch_flag == 0:
+        if err_flag == 0:
+            print('\nTest PASS!!!\n')
+        else:
+            print('\nError detected!!!!!\n')
+    else:
+        print('\nError caused by Ch missing!!\n')         
 
     print(" line 66, All jobs are done!")
 # end def main
@@ -77,9 +124,7 @@ def main():
 # 20220428 #self.queue = queue
 #    self.num_file = num_file
 #    self.store_dict = store_dict  # 20220428 #
-def print_bytes_hex(data):
-    lin = ['0x%02X' % i for i in data]
-    print(" ".join(lin))
+
 # # define a receive data function
 def Receive_data(store_dict, num_file):
     # begin iic initilization -----------------------------------------------------------------------------------#
@@ -126,25 +171,23 @@ def Receive_data(store_dict, num_file):
     GBCR2_Reg1.set_Tx1_Dis_DL_BIAS(0)
     GBCR2_Reg1.set_Tx2_Dis_DL_BIAS(0)
 
-    # iic_write_val = GBCR2_Reg1.get_config_vector()
-    iic_write_val = [0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,\
-                     0xBB,0x75,0x17,0xBB,0xBB,0x75,0xFF,0xE4,0x40,0xFF,0xE4,0x40,0xF9,0x17]
+    iic_write_val = GBCR2_Reg1.get_config_vector()
 
-    print("Line 126, Written values are ", end = "")
-    print_bytes_hex(iic_write_val)
-    # ## write data into I2C register one by one
-    # for i in range(len(iic_write_val)):
-    #     iic_write(1, Slave_Addr, 0, i, iic_write_val[i])
-    # print("Written values:", iic_write_val)
+    # print("Line 126, Written values are ", iic_write_val)
+
+    # write I2C register one by one
+    for i in range(len(iic_write_val)):
+       iic_write(1, Slave_Addr, 0, i, iic_write_val[i])
+    print("Expected values:", iic_write_val)
 
     ## read back  data from I2C register one by one
     # iic_read_val = []
     # for i in range(len(iic_write_val)):
-    #    iic_read_val += [iic_read(0, Slave_Addr, 1, i)]
+    #   iic_read_val += [iic_read(0, Slave_Addr, 1, i)]
     # if iic_read_val == iic_write_val:
-    #     print("Written =  Read: %s"%(iic_read_val))
-    # else:
-    #     print("Written != Read: %s"%(iic_read_val))
+    #    print("Written =  Read: %s"%(iic_read_val))
+    #else:
+    #    print("Written != Read: %s"%(iic_read_val))
     ## end iic initilization -----------------------------------------------------------------------------------#
 
     for files in range(num_file):
@@ -193,13 +236,13 @@ def Receive_data(store_dict, num_file):
 # end def run
 # ---------------------------------------------------------------------------------------------#
 
-# ---------------------------------------------------------------------
-# ------------------------#
+# ---------------------------------------------------------------------------------------------#
 def exec_data(mem_data, store_dict):
     isEnd = False
     count = 0
     aligned = 0
     i = 0
+    err_ch = 0
 
     # for i in range(6250)
     while i < 50001:
@@ -260,23 +303,33 @@ def exec_data(mem_data, store_dict):
                     cal_crc32 = cal_crc32_t
 
                 Time = datetime.datetime.now()
-                # print('%s %d %d %d %d %d %d %d %d %d' % (
-                #     Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp, expected_code,
-                #     received_code,
-                #     error_position, crc32))
+                print('%s %d %d %d %d %d %d %d %d %d' % (
+                    Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp, expected_code,
+                    received_code,
+                    error_position, crc32))
                 with open("./%s/ChAll.TXT" % store_dict,
-                          'a') as infile:  # # 'a': add, will not cover previous infor
+                          'a') as infile:  # # 'w': overwrite the file               
                     infile.write('%s %d %d %d %d %d %d %d %d %d\n' % (
                         Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp,
                         expected_code, received_code,
                         error_position, crc32))
                     infile.flush()
+
                 with open("./%s/Ch%d.TXT" % (store_dict, channel_id),
                           'a') as infile:  # # 'a': add, will not cover previous infor
                     infile.write('%s %d %d %d %d %d %d %d %d %d\n' % (
                         Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp,
                         expected_code, received_code,
                         error_position, crc32))
+                    if inject_error != error_counter:
+                        err_ch = err_ch + 1
+                        #print('err_ch = %d', err_ch)
+                    else:
+                        err_ch = err_ch
+                    if err_ch > 36:
+                    #    print('Error Detected!')
+                    #    os.close()
+                        return
                     infile.flush()
             else:  # error_flag != 1
                 count = count + 1
@@ -383,7 +436,6 @@ def iic_write(mode, slave_addr, wr, reg_addr, data):
 
 
 # ---------------------------------------------------------------------------------------------#
-
 
 # ---------------------------------------------------------------------------------------------#
 ## IIC read slave device

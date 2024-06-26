@@ -260,10 +260,10 @@ def exec_data(mem_data, store_dict):
                     cal_crc32 = cal_crc32_t
 
                 Time = datetime.datetime.now()
-                # print('%s %d %d %d %d %d %d %d %d %d' % (
-                #     Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp, expected_code,
-                #     received_code,
-                #     error_position, crc32))
+                print('%s %d %d %d %d %d %d %d %d %d' % (
+                    Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp, expected_code,
+                    received_code,
+                    error_position, crc32))
                 with open("./%s/ChAll.TXT" % store_dict,
                           'a') as infile:  # # 'a': add, will not cover previous infor
                     infile.write('%s %d %d %d %d %d %d %d %d %d\n' % (
