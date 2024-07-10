@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Data_Checker_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Data_Checker_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="27236122fs"></ZoomStartTime>
+      <ZoomEndTime time="27381896fs"></ZoomEndTime>
+      <Cursor1Time time="27357600fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="311"></NameColumnWidth>
+      <ValueColumnWidth column_width="141"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="57" />
+   <wvobject fp_name="/Data_Checker_tb/clk_200MHz" type="logic">
+      <obj_property name="ElementShortName">clk_200MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_200MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/clk_160MHz" type="logic">
+      <obj_property name="ElementShortName">clk_160MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_160MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/clk_40MHz" type="logic">
+      <obj_property name="ElementShortName">clk_40MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_40MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Rx_injectErrorCount" type="array">
+      <obj_property name="ElementShortName">Rx_injectErrorCount[111:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx_injectErrorCount[111:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/tx_data_gen" type="array">
+      <obj_property name="ElementShortName">tx_data_gen[223:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_gen[223:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/pulse" type="logic">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/fifo_data_out" type="array">
+      <obj_property name="ElementShortName">fifo_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/Rx_WrClk" type="array">
+      <obj_property name="ElementShortName">Rx_WrClk[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Rx_WrClk[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/Tx_WrClk" type="logic">
+      <obj_property name="ElementShortName">Tx_WrClk</obj_property>
+      <obj_property name="ObjectShortName">Tx_WrClk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/CLK200M" type="logic">
+      <obj_property name="ElementShortName">CLK200M</obj_property>
+      <obj_property name="ObjectShortName">CLK200M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/RX_Data" type="array">
+      <obj_property name="ElementShortName">RX_Data[895:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_Data[895:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/TX_Data" type="array">
+      <obj_property name="ElementShortName">TX_Data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">TX_Data[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/Out_Data" type="array">
+      <obj_property name="ElementShortName">Out_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Out_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/previousTXErrorCount" type="array">
+      <obj_property name="ElementShortName">previousTXErrorCount[63:0]</obj_property>
+      <obj_property name="ObjectShortName">previousTXErrorCount[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/TX_Error_Count_Change" type="logic">
+      <obj_property name="ElementShortName">TX_Error_Count_Change</obj_property>
+      <obj_property name="ObjectShortName">TX_Error_Count_Change</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_din" type="array">
+      <obj_property name="ElementShortName">buffer_din[7:0][127:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_din[7:0][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_wr_en" type="array">
+      <obj_property name="ElementShortName">buffer_wr_en[7:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_wr_en[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_rd_en" type="array">
+      <obj_property name="ElementShortName">buffer_rd_en[7:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_rd_en[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_dout" type="array">
+      <obj_property name="ElementShortName">buffer_dout[7:0][127:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_dout[7:0][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_full" type="array">
+      <obj_property name="ElementShortName">buffer_full[7:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_full[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_empty" type="array">
+      <obj_property name="ElementShortName">buffer_empty[7:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_empty[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/buffer_wrclk" type="array">
+      <obj_property name="ElementShortName">buffer_wrclk[7:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer_wrclk[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/din" type="array">
+      <obj_property name="ElementShortName">din[127:0]</obj_property>
+      <obj_property name="ObjectShortName">din[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/rd_data_count" type="array">
+      <obj_property name="ElementShortName">rd_data_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data_count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/wr_rst_busy" type="logic">
+      <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/data_aggregator_inst/rd_rst_busy" type="logic">
+      <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/pulse" type="logic">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/DataOut" type="logic">
+      <obj_property name="ElementShortName">DataOut</obj_property>
+      <obj_property name="ObjectShortName">DataOut</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/DataIn" type="logic">
+      <obj_property name="ElementShortName">DataIn</obj_property>
+      <obj_property name="ObjectShortName">DataIn</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Error_bit_Count" type="array">
+      <obj_property name="ElementShortName">Error_bit_Count[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Error_bit_Count[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/count" type="array">
+      <obj_property name="ElementShortName">count[5:0]</obj_property>
+      <obj_property name="ObjectShortName">count[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/clk5M" type="logic">
+      <obj_property name="ElementShortName">clk5M</obj_property>
+      <obj_property name="ObjectShortName">clk5M</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/PRBS31Gen32b" type="array">
+      <obj_property name="ElementShortName">PRBS31Gen32b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PRBS31Gen32b[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/errorInjCount" type="array">
+      <obj_property name="ElementShortName">errorInjCount[15:0]</obj_property>
+      <obj_property name="ObjectShortName">errorInjCount[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Clk_Out" type="logic">
+      <obj_property name="ElementShortName">Clk_Out</obj_property>
+      <obj_property name="ObjectShortName">Clk_Out</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/DESER_OUT" type="array">
+      <obj_property name="ElementShortName">DESER_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DESER_OUT[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/rawErrorCount" type="array">
+      <obj_property name="ElementShortName">rawErrorCount[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rawErrorCount[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/pulse" type="logic">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/DataIn" type="array">
+      <obj_property name="ElementShortName">DataIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIn[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/Error_bit_Count" type="array">
+      <obj_property name="ElementShortName">Error_bit_Count[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Error_bit_Count[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/Data_reg" type="array">
+      <obj_property name="ElementShortName">Data_reg[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_reg[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/Bit_Error" type="array">
+      <obj_property name="ElementShortName">Bit_Error[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Bit_Error[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/count" type="array">
+      <obj_property name="ElementShortName">count[5:0]</obj_property>
+      <obj_property name="ObjectShortName">count[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Data_Checker_tb/Data_Checker_Inst/Data_generator_160M/Tx_PRBS31_Data_Checker_inst/Error_bit_Count_reg" type="array">
+      <obj_property name="ElementShortName">Error_bit_Count_reg[63:0]</obj_property>
+      <obj_property name="ObjectShortName">Error_bit_Count_reg[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------------
 // File       : tri_mode_ethernet_mac_0.v
-// Author     : Xilinx Inc.
+// Author     : AMD Inc.
 // -----------------------------------------------------------------------------
-// (c) Copyright 2004-2013 Xilinx, Inc. All rights reserved.
+// (c) Copyright 2004-2013 Advanced Micro Devices, Inc. All rights reserved.
 //
 // This file contains confidential and proprietary information
-// of Xilinx, Inc. and is protected under U.S. and
+// of Advanced Micro Devices, Inc. and is protected under U.S. and
 // international copyright and other intellectual property
 // laws.
 //
@@ -13,13 +13,13 @@
 // This disclaimer is not a license and does not grant any
 // rights to the materials distributed herewith. Except as
 // otherwise provided in a valid license issued to you by
-// Xilinx, and to the maximum extent permitted by applicable
+// AMD, and to the maximum extent permitted by applicable
 // law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
 // AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
 // BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
 // INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-// (2) Xilinx shall not be liable (whether in contract or tort,
+// (2) AMD shall not be liable (whether in contract or tort,
 // including negligence, or under any other theory of
 // liability) for any loss or damage of any kind or nature
 // related to, arising under or in connection with these
@@ -28,11 +28,11 @@
 // (including loss of data, profits, goodwill, or any type of
 // loss or damage suffered as a result of any action brought
 // by a third party) even if such damage or loss was
-// reasonably foreseeable or Xilinx had been advised of the
+// reasonably foreseeable or AMD had been advised of the
 // possibility of the same.
 //
 // CRITICAL APPLICATIONS
-// Xilinx products are not designed or intended to be fail-
+// AMD products are not designed or intended to be fail-
 // safe, or for use in any application requiring fail-safe
 // performance, such as life-support or safety devices or
 // systems, Class III medical devices, nuclear facilities,
@@ -41,7 +41,7 @@
 // injury, or severe property or environmental damage
 // (individually and collectively, "Critical
 // Applications"). Customer assumes the sole risk and
-// liability of any use of Xilinx products in Critical
+// liability of any use of AMD products in Critical
 // Applications, subject only to applicable laws and
 // regulations governing limitations on product liability.
 //
@@ -60,9 +60,10 @@
 // The entity declaration for the block level example design.
 //------------------------------------------------------------------------------
 
-(* CORE_GENERATION_INFO = "tri_mode_ethernet_mac_0,tri_mode_ethernet_mac_0_block,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=tri_mode_ethernet_mac,x_ipVersion=9.0,x_ipCoreRevision=13,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,x_ipLicense=tri_mode_eth_mac@2015.04(bought),x_ipLicense=eth_avb_endpoint@2015.04(bought),c_component_name=tri_mode_ethernet_mac_0,c_physical_interface=RGMII,c_half_duplex=false,c_has_host=true,c_has_mdio=true,c_mdio_external=true,c_axilite_freq=150.00,c_add_filter=false,c_at_entries=0,c_family=kintex7,c_mac_speed=TRI_SPEED,c_int_clk_src=User_Clk2,c_int_mode_type=BASEX,c_has_stats=false,c_num_stats=34,c_cntr_rst=true,c_stats_width=64,c_avb=false,c_1588=0,c_tx_inband_cf_enable=false,c_rx_inband_ts_enable=false,c_tx_tuser_width=1,c_rx_vec_width=79,c_tx_vec_width=79,c_addr_width=12,c_pfc=false,c_mii_io=true,c_data_rate=1_Gbps}" *)
-(* X_CORE_INFO = "tri_mode_ethernet_mac_0_block,Vivado 2018.3" *)
+(* CORE_GENERATION_INFO = "tri_mode_ethernet_mac_0,tri_mode_ethernet_mac_0_block,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=tri_mode_ethernet_mac,x_ipVersion=9.0,x_ipCoreRevision=32,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,c_component_name=tri_mode_ethernet_mac_0,c_physical_interface=RGMII,c_half_duplex=false,c_has_host=true,c_has_mdio=true,c_mdio_external=true,c_axilite_freq=150.00,c_add_filter=false,c_at_entries=0,c_family=kintex7,c_mac_speed=TRI_SPEED,c_int_clk_src=User_Clk2,c_int_mode_type=BASEX,c_has_stats=false,c_num_stats=34,c_cntr_rst=true,c_stats_width=64,c_avb=false,c_1588=0,c_tx_inband_cf_enable=false,c_rx_inband_ts_enable=false,c_tx_tuser_width=1,c_rx_vec_width=79,c_tx_vec_width=79,c_addr_width=12,c_pfc=false,c_mii_io=true,c_data_rate=1_Gbps,x_ipLicense=tri_mode_eth_mac@2015.04(hardware_evaluation),x_ipLicense=eth_avb_endpoint@2015.04(design_linking)}" *)
+(* X_CORE_INFO = "tri_mode_ethernet_mac_0_block,Vivado 2024.1" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
+  
 module tri_mode_ethernet_mac_0 (
       input                gtx_clk,
       
@@ -75,6 +76,7 @@ module tri_mode_ethernet_mac_0 (
       input                glbl_rstn,
       input                rx_axi_rstn,
       input                tx_axi_rstn,
+
 
       // Receiver Interface
       //--------------------------
@@ -166,7 +168,9 @@ module tri_mode_ethernet_mac_0 (
    //---------------------------------------------------------------------------
    // Instantiate the TEMAC core block
    //---------------------------------------------------------------------------
+  
    tri_mode_ethernet_mac_0_block inst(
+   
       .gtx_clk                            (gtx_clk),
       
       .gtx_clk90                          (gtx_clk90),
@@ -175,6 +179,7 @@ module tri_mode_ethernet_mac_0 (
       .glbl_rstn                          (glbl_rstn),
       .rx_axi_rstn                        (rx_axi_rstn),
       .tx_axi_rstn                        (tx_axi_rstn),
+
 
       // Receiver Interface
       //--------------------------

@@ -1,0 +1,37 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+INFO: [Synth 8-5546] ROM "cmdState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cmdState" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port CMD_FIFO_Q[35] in module control_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CMD_FIFO_Q[34] in module control_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CMD_FIFO_Q[33] in module control_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CMD_FIFO_Q[32] in module control_interface is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[30]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[29]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[29]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[28]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[28]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[27]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[27]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[26]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[26]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[25]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[25]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[24]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[24]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[23]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[23]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[22]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[22]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[21]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[21]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[20]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[20]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[19]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[19]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[18]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[18]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[17]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[17]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[16]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[15]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[15]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[14]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[13]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[13]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[12]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[12]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[11]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[10]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[9]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[8]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[7]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[6]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[5]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[4]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'control_interface_inst/bMemNotReg_reg[3]' (FDCE) to 'control_interface_inst/bMemNotReg_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (control_interface_inst/\bMemNotReg_reg[2] )

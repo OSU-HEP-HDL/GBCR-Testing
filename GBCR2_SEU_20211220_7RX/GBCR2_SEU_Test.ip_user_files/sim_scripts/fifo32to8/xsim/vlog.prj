@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/fifo32to8/sim/fifo32to8.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

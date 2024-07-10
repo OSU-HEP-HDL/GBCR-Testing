@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="clockwiz_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1719444864">
+  <File Type="RDS-DCP" Name="clockwiz.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="clockwiz_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="clockwiz.tcl"/>
+  <File Type="RDS-UTIL" Name="clockwiz_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="clockwiz_reports.tcl"/>
+  <File Type="RDS-RDS" Name="clockwiz.vds"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clockwiz" RelGenDir="$PGENDIR/clockwiz">
+    <File Path="$PPRDIR/ipcore_dir/clockwiz/clockwiz.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="clockwiz"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clockwiz" RelGenDir="$PGENDIR/clockwiz">
+    <File Path="$PPRDIR/ipcore_dir/clockwiz/clockwiz.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="clockwiz"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,2 @@
+fifo_128to32_depth16k.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/fifo_128to32_depth16k/sim/fifo_128to32_depth16k.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

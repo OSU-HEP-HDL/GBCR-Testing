@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "fifo_128to128_depth1k",
     "component_reference": "xilinx.com:ip:fifo_generator:13.2",
-    "ip_revision": "5",
+    "ip_revision": "10",
     "gen_directory": "../../../../GBCR2_SEU_Test.gen/sources_1/ip/fifo_128to128_depth1k",
     "parameters": {
       "component_parameters": {
@@ -396,12 +396,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "5" } ],
+        "IPREVISION": [ { "value": "10" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../GBCR2_SEU_Test.gen/sources_1/ip/fifo_128to128_depth1k" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2020.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -426,12 +426,13 @@
           "mode": "slave",
           "parameters": {
             "FREQ_HZ": [ { "value": "100000000", "resolve_type": "user", "format": "long", "usage": "all" } ],
-            "FREQ_TOLERANCE_HZ": [ { "value": "0", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
-            "PHASE": [ { "value": "0.000", "resolve_type": "generated", "format": "float", "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "", "resolve_type": "generated", "is_static_object": false } ],
-            "ASSOCIATED_BUSIF": [ { "value": "", "resolve_type": "generated", "is_static_object": false } ],
-            "ASSOCIATED_RESET": [ { "value": "", "resolve_type": "generated", "is_static_object": false } ],
-            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_static_object": false } ]
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_RESET": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "CLK": [ { "physical_name": "wr_clk" } ]
@@ -443,12 +444,13 @@
           "mode": "slave",
           "parameters": {
             "FREQ_HZ": [ { "value": "100000000", "resolve_type": "user", "format": "long", "usage": "all" } ],
-            "FREQ_TOLERANCE_HZ": [ { "value": "0", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
-            "PHASE": [ { "value": "0.000", "resolve_type": "generated", "format": "float", "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "", "resolve_type": "generated", "is_static_object": false } ],
-            "ASSOCIATED_BUSIF": [ { "value": "", "resolve_type": "generated", "is_static_object": false } ],
-            "ASSOCIATED_RESET": [ { "value": "", "resolve_type": "generated", "is_static_object": false } ],
-            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_static_object": false } ]
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_RESET": [ { "value": "", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "CLK": [ { "physical_name": "rd_clk" } ]

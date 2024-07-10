@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 13 14:57:13 2022
+# Process ID: 21852
+# Current directory: d:/xilinxtrain/GBCR2/GBCR2_SEU_20220408_7RX/ipcore_dir/gtwizard_0_ex
+# Command line: vivado.exe -notrace -source d:/xilinxtrain/GBCR2/GBCR2_SEU_20220408_7RX/GBCR2_SEU_Test.srcs/sources_1/ip/gtwizard_0/gtwizard_0_ex.tcl
+# Log file: d:/xilinxtrain/GBCR2/GBCR2_SEU_20220408_7RX/ipcore_dir/gtwizard_0_ex/vivado.log
+# Journal file: d:/xilinxtrain/GBCR2/GBCR2_SEU_20220408_7RX/ipcore_dir/gtwizard_0_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source d:/xilinxtrain/GBCR2/GBCR2_SEU_20220408_7RX/GBCR2_SEU_Test.srcs/sources_1/ip/gtwizard_0/gtwizard_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

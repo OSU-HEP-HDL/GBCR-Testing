@@ -1,0 +1,10 @@
+c       sys_clk_i globalresetter_inst/GLOBAL_RST_reg/C       4700       4700 -2147483648 -2147483648
+c       sys_clk_i clockwiz_inst/clk_in1          0          0 -2147483648 -2147483648
+s globalresetter_inst/GLOBAL_RST_reg/C       FORCE_RST       1910 -2147483648 -2147483648       1910
+s       sys_clk_i       FORCE_RST       1910 -2147483648 -2147483648       1910
+c       sys_clk_i         SYS_CLK       4700       4700 -2147483648 -2147483648
+t globalresetter_inst/GLOBAL_RST_reg/C      GLOBAL_RST       1460 -2147483648 -2147483648       1460
+c clockwiz_inst/clk_out5        CLK_OUT5          0          0 -2147483648 -2147483648
+c clockwiz_inst/clk_out4        CLK_OUT4          0          0 -2147483648 -2147483648
+c clockwiz_inst/clk_out3        CLK_OUT3          0          0 -2147483648 -2147483648
+c clockwiz_inst/clk_out2        CLK_OUT2          0          0 -2147483648 -2147483648

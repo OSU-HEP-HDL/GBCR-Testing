@@ -1,0 +1,225 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date             : Thu Jun 27 14:04:01 2024
+| Host             : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command          : report_power -file GBCR2_SEU_Test_power_routed.rpt -pb GBCR2_SEU_Test_power_summary_routed.pb -rpx GBCR2_SEU_Test_power_routed.rpx
+| Design           : GBCR2_SEU_Test
+| Device           : xc7k325tffg900-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 4.673        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 4.457        |
+| Device Static (W)        | 0.216        |
+| Effective TJA (C/W)      | 1.8          |
+| Max Ambient (C)          | 76.7         |
+| Junction Temperature (C) | 33.3         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.128 |       50 |       --- |             --- |
+| Slice Logic              |     0.841 |    48052 |       --- |             --- |
+|   LUT as Logic           |     0.837 |    19410 |    203800 |            9.52 |
+|   CARRY4                 |     0.002 |     1805 |     50950 |            3.54 |
+|   Register               |     0.002 |    20357 |    407600 |            4.99 |
+|   F7/F8 Muxes            |    <0.001 |      463 |    203800 |            0.23 |
+|   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
+|   LUT as Shift Register  |    <0.001 |       58 |     64000 |            0.09 |
+|   LUT as Distributed RAM |    <0.001 |       40 |     64000 |            0.06 |
+|   Others                 |     0.000 |     1601 |       --- |             --- |
+| Signals                  |     0.917 |    42087 |       --- |             --- |
+| Block RAM                |     0.563 |    195.5 |       445 |           43.93 |
+| MMCM                     |     0.185 |        2 |        10 |           20.00 |
+| I/O                      |     0.062 |       36 |       500 |            7.20 |
+| GTX                      |     1.761 |        8 |        16 |           50.00 |
+| Static Power             |     0.216 |          |           |                 |
+| Total                    |     4.673 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     2.575 |       2.473 |      0.102 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.138 |       0.108 |      0.029 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.020 |       0.019 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.045 |       0.035 |      0.010 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.834 |       0.829 |      0.006 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.737 |       0.732 |      0.005 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.3                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                            | Domain                                                                                                                                   | Constraint (ns) |
++------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Q0_CLK1_GTREFCLK_PAD_P_IN                                                                                        | Q0_CLK1_GTREFCLK_PAD_P_IN                                                                                                                |             6.2 |
+| RGMII_RXC                                                                                                        | RGMII_RXC                                                                                                                                |             8.0 |
+| clk_out2_clockwiz                                                                                                | global_clock_reset_inst/clockwiz_inst/inst/clk_out2_clockwiz                                                                             |            20.0 |
+| clk_out3_clockwiz                                                                                                | global_clock_reset_inst/clockwiz_inst/inst/clk_out3_clockwiz                                                                             |            10.0 |
+| clk_out4_clockwiz                                                                                                | global_clock_reset_inst/clockwiz_inst/inst/clk_out4_clockwiz                                                                             |             6.2 |
+| clk_out5_clockwiz                                                                                                | global_clock_reset_inst/clockwiz_inst/inst/clk_out5_clockwiz                                                                             |             5.0 |
+| clkfbout                                                                                                         | gig_eth_inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_support_clocking_i/clkfbout                                        |             8.0 |
+| clkfbout_clockwiz                                                                                                | global_clock_reset_inst/clockwiz_inst/inst/clkfbout_clockwiz                                                                             |             5.0 |
+| clkout0                                                                                                          | gig_eth_inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_support_clocking_i/clkout0                                         |             8.0 |
+| clkout1                                                                                                          | gig_eth_inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_support_clocking_i/clkout1                                         |             8.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                       | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK                                                                        |            33.0 |
+| gig_eth_inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst_mdc                                 | gig_eth_inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_0_core/man_block.managen/miim_clk_int |           480.0 |
+| gtwizard_0_exdes_inst/gtwizard_0_support_i/gtwizard_0_init_i/inst/gtwizard_0_i/gt0_gtwizard_0_i/gtxe2_i/RXOUTCLK | gtwizard_0_exdes_inst/gtwizard_0_support_i/gtwizard_0_init_i/inst/gtwizard_0_i/gt0_gtwizard_0_i/gt0_rxoutclk_out                         |            25.0 |
+| gtwizard_0_exdes_inst/gtwizard_0_support_i/gtwizard_0_init_i/inst/gtwizard_0_i/gt0_gtwizard_0_i/gtxe2_i/TXOUTCLK | gtwizard_0_exdes_inst/gtwizard_0_support_i/gtwizard_0_init_i/inst/gtwizard_0_i/gt0_gtwizard_0_i/gt0_txoutclk_out                         |            25.0 |
+| sgmii_clock                                                                                                      | SGMIICLK_Q0_P                                                                                                                            |             8.0 |
+| system_clock                                                                                                     | SYS_CLK_P                                                                                                                                |             5.0 |
++------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------+-----------+
+| Name                                          | Power (W) |
++-----------------------------------------------+-----------+
+| GBCR2_SEU_Test                                |     4.457 |
+|   Data_Checker_Inst                           |     2.334 |
+|     Data_generator_160M                       |     0.626 |
+|       SER32b_inst                             |     0.001 |
+|       Tx_PRBS7_Data_Checker_inst              |     0.624 |
+|     dataPrbs7Check_inst                       |     0.121 |
+|     data_aggregator_inst                      |     0.617 |
+|       fifo_128to32_depth16k_inst              |     0.288 |
+|       genblk2[0].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[1].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[2].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[3].fifo_128to128_depth1k_inst   |     0.033 |
+|       genblk2[4].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[5].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[6].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[7].fifo_128to128_depth1k_inst   |     0.032 |
+|       genblk2[8].fifo_128to128_depth1k_inst   |     0.057 |
+|     loop_rx_ch[0].PRBS31_Seed_Checker_Rxinst0 |     0.139 |
+|     loop_rx_ch[1].PRBS31_Seed_Checker_Rxinst0 |     0.140 |
+|     loop_rx_ch[2].PRBS31_Seed_Checker_Rxinst0 |     0.136 |
+|     loop_rx_ch[4].PRBS31_Seed_Checker_Rxinst0 |     0.138 |
+|     loop_rx_ch[5].PRBS31_Seed_Checker_Rxinst0 |     0.136 |
+|     loop_rx_ch[6].PRBS31_Seed_Checker_Rxinst0 |     0.140 |
+|     loop_rx_ch[7].PRBS31_Seed_Checker_Rxinst0 |     0.141 |
+|   Data_Source_Inst                            |     0.003 |
+|   control_interface_inst                      |     0.009 |
+|     data_fifo                                 |     0.002 |
+|       U0                                      |     0.002 |
+|   dbg_hub                                     |     0.003 |
+|     inst                                      |     0.003 |
+|       BSCANID.u_xsdbm_id                      |     0.003 |
+|   gig_eth_inst                                |     0.145 |
+|     axi_lite_controller                       |     0.001 |
+|     rx_fifo_inst                              |     0.002 |
+|       U0                                      |     0.002 |
+|     tcp_server_inst                           |     0.027 |
+|       Inst_PACKET_PARSING                     |     0.005 |
+|       Inst_PING                               |     0.002 |
+|       TCP_SERVER_X.Inst_TCP_RXBUFNDEMUX2      |     0.002 |
+|       TCP_SERVER_X.Inst_TCP_TX                |     0.004 |
+|       TCP_SERVER_X.Inst_TCP_TXBUF             |     0.007 |
+|       TCP_SERVER_X.TCP_SERVER_001             |     0.005 |
+|     trimac_fifo_block                         |     0.114 |
+|       trimac_sup_block                        |     0.106 |
+|       user_side_FIFO                          |     0.007 |
+|     tx_fifo_inst                              |     0.001 |
+|       U0                                      |     0.001 |
+|   global_clock_reset_inst                     |     0.112 |
+|     clockwiz_inst                             |     0.100 |
+|       inst                                    |     0.100 |
+|     globalresetter_inst                       |     0.005 |
+|   gtwizard_0_exdes_inst                       |     1.792 |
+|     gtwizard_0_support_i                      |     1.792 |
+|       gtwizard_0_init_i                       |     1.792 |
+|   vio_0_inst                                  |     0.008 |
+|     inst                                      |     0.008 |
+|       PROBE_IN_INST                           |     0.007 |
++-----------------------------------------------+-----------+
+
+

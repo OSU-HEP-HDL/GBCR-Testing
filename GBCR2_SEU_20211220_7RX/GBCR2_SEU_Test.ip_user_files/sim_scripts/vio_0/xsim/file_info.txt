@@ -1,0 +1,2 @@
+vio_0.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/vio_0/sim/vio_0.v,incdir="../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/vio_0/hdl/verilog"incdir="../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/vio_0/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

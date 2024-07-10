@@ -1,0 +1,3 @@
+clockwiz_clk_wiz.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/clockwiz/clockwiz_clk_wiz.v,incdir="../../../ipstatic"incdir="../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/clockwiz"
+clockwiz.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/clockwiz/clockwiz.v,incdir="../../../ipstatic"incdir="../../../../../firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.gen/sources_1/ip/clockwiz"
+glbl.v,Verilog,xil_defaultlib,glbl.v

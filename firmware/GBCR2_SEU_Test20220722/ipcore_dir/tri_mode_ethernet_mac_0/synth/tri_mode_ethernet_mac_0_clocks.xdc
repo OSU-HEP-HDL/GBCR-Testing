@@ -26,7 +26,7 @@ set ip_gtx_clk     [get_clocks -of_objects [get_ports gtx_clk]]
 
  
 # define a virtual clock to simplify the timing constraints
-create_clock -name [current_instance .]_rgmii_rx_clk -period 8
+create_clock -name [current_instance .]_rgmii_rx_clk -period 8.000
 set rgmii_rx_clk [current_instance .]_rgmii_rx_clk 
 
 # Identify RGMII Rx Pads only.  
@@ -64,6 +64,28 @@ set_output_delay 0.75 -max -clock [get_clocks $rgmii_tx_clk] [get_ports {rgmii_t
 set_output_delay -0.7 -min -clock [get_clocks $rgmii_tx_clk] [get_ports {rgmii_txd[*] rgmii_tx_ctl}] -clock_fall -add_delay 
 
 ############################################################
+# MDIO I/F
+############################################################
+set axi4_lite_clk [get_clocks -of_objects [get_ports s_axi_aclk]]
+
+create_generated_clock -name [current_instance .]_mdc -divide_by 60 -source [get_ports s_axi_aclk] [get_pins -hier -regexp -nocase {.*mdio_enabled\.miim_clk_int_reg/Q}]
+set mdc_clk [get_clocks [current_instance .]_mdc]
+
+set_input_delay -clock $mdc_clk -max [expr 400-300] [get_ports mdio]
+set_input_delay -clock $mdc_clk -min 0 -add_delay   [get_ports mdio]
+
+set_output_delay -clock $mdc_clk -max 10              [get_ports mdio]
+set_output_delay -clock $mdc_clk -min -10 -add_delay  [get_ports mdio]
+
+set_false_path -from [get_cells -hier -regexp -nocase {.*mdio_enabled\.phy\/mdio_out_reg}] -to $mdc_clk
+set_false_path -from [get_cells -hier -regexp -nocase {.*mdio_enabled\.phy\/mdio_tristate_reg}] -to $mdc_clk
+
+set_false_path -from $mdc_clk -to [get_cells -hier -regexp -nocase {.*mdio_enabled\.phy\/mdio.*reg}]
+set_false_path -from $mdc_clk -to [get_cells -hier -regexp -nocase {.*mdio_enabled\.phy\/enable_reg_reg}]
+set_false_path -from $mdc_clk -to [get_cells -hier -regexp -nocase {.*mdio_enabled\.miim_clk_int_reg}]
+set_false_path -from $mdc_clk -to [get_ports mdc]
+set_false_path -from [get_cells -hier -regexp -nocase {.*mdio_enabled\.phy\/mdio_tristate_reg}] -to $mdc_clk 
+############################################################
 # Crossing of Clock Domain Constraints: please do not edit #
 ############################################################
 
@@ -76,4 +98,14 @@ set_false_path -from [get_cells {tri_mode_ethernet_mac_0_core/*managen/conf/int_
 set_false_path -from [get_cells {tri_mode_ethernet_mac_0_core/*managen/conf/int_*reg[*]}] -to $rx_clk
 set_false_path -from [get_cells {tri_mode_ethernet_mac_0_core/*managen/conf/int_*reg}] -to $ip_gtx_clk
 set_false_path -from [get_cells {tri_mode_ethernet_mac_0_core/*managen/conf/int_*reg}] -to $rx_clk
+
+create_waiver -internal -scope -quiet -type METHODOLOGY -id {TIMING-54} -user "tri_mode_ethernet_mac" -desc "One of the given clocks is a part of an external interface and will not be connected to any other IP" -tags "11999"\
+-objects [get_clocks $rgmii_rx_clk] -objects $rx_clk 
+create_waiver -internal -scope -quiet -type METHODOLOGY -id {TIMING-54} -user "tri_mode_ethernet_mac" -desc "One of the given clocks is a part of an external interface and will not be connected to any other IP" -tags "11999"\
+-objects $rx_clk -objects [get_clocks $rgmii_rx_clk]
+create_waiver -internal -scope -quiet -type METHODOLOGY -id {TIMING-54} -user "tri_mode_ethernet_mac" -desc "One of the given clocks is a part of an external interface and will not be connected to any other IP" -tags "11999" \
+-objects $ip_gtx_clk -objects [get_clocks  $rgmii_tx_clk]
+create_waiver -internal -scope -quiet -type METHODOLOGY -id {TIMING-54} -user "tri_mode_ethernet_mac" -desc "One of the given clocks is a part of an external interface and will not be connected to any other IP" -tags "11999" \
+-objects [get_clocks  $rgmii_tx_clk] -objects $ip_gtx_clk
+
 

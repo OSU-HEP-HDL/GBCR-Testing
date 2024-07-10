@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220418/GBCR2_SEU_Test.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="297"></NameColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="Data_Checker_Inst/dataPrbs7Check_inst/CRC32gen_prbs7chk_inst/data_r" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Data_Checker_Inst/dataPrbs7Check_inst/CRC32gen_prbs7chk_inst/data_r[223:0]</obj_property>
+      <obj_property name="ObjectShortName">data_r[223:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Data_Checker_Inst/dataPrbs7Check_inst/CRC32gen_prbs7chk_inst/crc32_8_r[27]_226" type="array">
+      <obj_property name="ElementShortName">Data_Checker_Inst/dataPrbs7Check_inst/CRC32gen_prbs7chk_inst/crc32_8_r[27]_226[31:0]</obj_property>
+      <obj_property name="ObjectShortName">crc32_8_r[27]_226[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>
