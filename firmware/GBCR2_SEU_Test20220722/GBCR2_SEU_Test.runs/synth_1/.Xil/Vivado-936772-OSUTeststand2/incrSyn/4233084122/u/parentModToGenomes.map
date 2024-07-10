@@ -1,0 +1,3 @@
+GBCR2_SEU_Test: GBCR2_SEU_Test__GCB1, GBCR2_SEU_Test__GCB0, Data_Checker__GB2, Data_Checker__GB1, Data_Checker__GB0, global_clock_reset__GC0, 
+Data_Checker: Data_Checker__GB2, Data_Checker__GB1, Data_Checker__GB0, 
+global_clock_reset: global_clock_reset__GC0, 

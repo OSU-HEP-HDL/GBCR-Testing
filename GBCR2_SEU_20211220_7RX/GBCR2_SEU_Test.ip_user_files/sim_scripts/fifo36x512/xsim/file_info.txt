@@ -1,0 +1,2 @@
+fifo36x512.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/fifo36x512/sim/fifo36x512.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

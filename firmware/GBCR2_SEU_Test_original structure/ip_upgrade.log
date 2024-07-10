@@ -1,0 +1,58 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Apr  8 21:28:50 2022
+| Host         : SC-202012291841 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo36x512'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fifo36x512 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 3) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Apr  8 21:11:02 2022
+| Host         : SC-202012291841 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo32to8'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fifo32to8 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 3) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Apr  8 21:09:42 2022
+| Host         : SC-202012291841 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo8to32'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fifo8to32 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 3) to (Rev. 5)
+

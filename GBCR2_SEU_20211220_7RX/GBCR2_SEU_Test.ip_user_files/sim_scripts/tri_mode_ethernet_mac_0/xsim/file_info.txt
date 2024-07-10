@@ -1,0 +1,8 @@
+tri_mode_ethernet_mac_0_block_sync_block.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/common/tri_mode_ethernet_mac_0_block_sync_block.v,
+tri_mode_ethernet_mac_0_axi4_lite_ipif_top.vhd,vhdl,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0_axi4_lite_ipif_top.vhd,
+tri_mode_ethernet_mac_0_axi4_lite_ipif_wrapper.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0_axi4_lite_ipif_wrapper.v,
+tri_mode_ethernet_mac_0_clk_en_gen.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0_clk_en_gen.v,
+tri_mode_ethernet_mac_0_rgmii_v2_0_if.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/physical/tri_mode_ethernet_mac_0_rgmii_v2_0_if.v,
+tri_mode_ethernet_mac_0_block.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0_block.v,
+tri_mode_ethernet_mac_0.v,verilog,xil_defaultlib,../../../../../firmware/GBCR2_SEU_Test20220722/ipcore_dir/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

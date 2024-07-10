@@ -1,6 +1,149 @@
+2024.1:
+ * Version 9.0 (Rev. 32)
+ * General: Added device support
+ * General: IP packaging adjustments to address warnings from IP Packager integrity check
+ * Revision change in one or more subcores
+
+2023.2.2:
+ * Version 9.0 (Rev. 31)
+ * General: Updated device support
+ * Revision change in one or more subcores
+
+2023.2.1:
+ * Version 9.0 (Rev. 30)
+ * General: Added device support
+
+2023.2:
+ * Version 9.0 (Rev. 29)
+ * General: Rebrand to AMD copyright information
+ * General: Added device support
+ * Revision change in one or more subcores
+
+2023.1.2:
+ * Version 9.0 (Rev. 28)
+ * General: Added device support
+
+2023.1.1:
+ * Version 9.0 (Rev. 27)
+ * General: Added device support
+
+2023.1:
+ * Version 9.0 (Rev. 26)
+ * General: Added device support
+
+2022.2.2:
+ * Version 9.0 (Rev. 25)
+ * General: Added device support
+
+2022.2.1:
+ * Version 9.0 (Rev. 24)
+ * General: Added device support
+
+2022.2:
+ * Version 9.0 (Rev. 23)
+ * General: Added device support
+
+2022.1.2:
+ * Version 9.0 (Rev. 22)
+ * No changes
+
+2022.1.1:
+ * Version 9.0 (Rev. 22)
+ * No changes
+
+2022.1:
+ * Version 9.0 (Rev. 22)
+ * Feature Enhancement: Exposed the RGMII IDELAY and ODELAY primitive ports for user access on Versal devices. Refer AR-33647 for more details.
+ * Other: Added new Versal device support
+ * Revision change in one or more subcores
+
+2021.2.2:
+ * Version 9.0 (Rev. 21)
+ * No changes
+
+2021.2.1:
+ * Version 9.0 (Rev. 21)
+ * General: Updated device support
+
+2021.2:
+ * Version 9.0 (Rev. 20)
+ * General: Added device support
+
+2021.1.1:
+ * Version 9.0 (Rev. 19)
+ * No changes
+
+2021.1:
+ * Version 9.0 (Rev. 19)
+ * Bug Fix: Support Added for Half Duplex Mode Simulation in example design
+ * Revision change in one or more subcores
+
+2020.3:
+ * Version 9.0 (Rev. 18)
+ * General: Added Versal Premium device support
+
+2020.2.2:
+ * Version 9.0 (Rev. 17)
+ * No changes
+
+2020.2.1:
+ * Version 9.0 (Rev. 17)
+ * No changes
+
+2020.2:
+ * Version 9.0 (Rev. 17)
+ * Bug Fix: Fixed TIMING-10 Methadology violations
+ * Other: Spartan-7 device families marked production
+ * Other: Added waivers for safe CDC violaiton messages
+
+2020.1.1:
+ * Version 9.0 (Rev. 16)
+ * No changes
+
+2020.1:
+ * Version 9.0 (Rev. 16)
+ * Bug Fix: Versal RGMII mode: Fixed delay values not laoded for ODELAY elements on RGMI TX_CTL and TXD
+ * Other: VirtexuplusHBM and Virtexuplus58g devices families marked production
+ * Other: Added I/O delay constraints for MDIO I/F
+
+2019.2.2:
+ * Version 9.0 (Rev. 15)
+ * No changes
+
+2019.2.1:
+ * Version 9.0 (Rev. 15)
+ * No changes
+
+2019.2:
+ * Version 9.0 (Rev. 15)
+ * General: Added Versal device support.
+ * Revision change in one or more subcores
+
+2019.1.3:
+ * Version 9.0 (Rev. 14)
+ * No changes
+
+2019.1.2:
+ * Version 9.0 (Rev. 14)
+ * No changes
+
+2019.1.1:
+ * Version 9.0 (Rev. 14)
+ * No changes
+
+2019.1:
+ * Version 9.0 (Rev. 14)
+ * Bug Fix: Fixed bug which resulted in TX PTP packet buffer contents getting corrupted after user writes to it.
+ * Bug Fix: Updated Internal mode block-level XDC: Removed set_max_delay constraints for TX-RX timing paths when the IP is generated with clock source set to user_clk2.
+ * Revision change in one or more subcores
+
+2018.3.1:
+ * Version 9.0 (Rev. 13)
+ * No changes
+
 2018.3:
  * Version 9.0 (Rev. 13)
- * Bug Fix: HASH(0x173fe00)
+ * Bug Fix: HASH(0x2961bd0)
  * Bug Fix: Updated constraints to fix XDCB-5 DRC violation
  * Bug Fix: Updated GMII clock constraint XDC: Specify master clock when an generated clock are defined
  * Other: 2.5 Gbps data-rate mode enabled for Artix 7 -2L devices
@@ -224,24 +367,23 @@
  * tx_axis_mac_tuser is now defined as std_logic_vector for all VHDL parameterizations.
  * Added IP example design support for the Artix AC701 board.
 
-(c) Copyright 2002 - 2018 Xilinx, Inc. All rights reserved.
+(c) Copyright 2002 - 2024 Advanced Micro Devices, Inc. All rights reserved.
 
 This file contains confidential and proprietary information
-of Xilinx, Inc. and is protected under U.S. and
-international copyright and other intellectual property
-laws.
+of AMD and is protected under U.S. and international copyright
+and other intellectual property laws.
 
 DISCLAIMER
 This disclaimer is not a license and does not grant any
 rights to the materials distributed herewith. Except as
 otherwise provided in a valid license issued to you by
-Xilinx, and to the maximum extent permitted by applicable
+AMD, and to the maximum extent permitted by applicable
 law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
 AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
 BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
 INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-(2) Xilinx shall not be liable (whether in contract or tort,
+(2) AMD shall not be liable (whether in contract or tort,
 including negligence, or under any other theory of
 liability) for any loss or damage of any kind or nature
 related to, arising under or in connection with these
@@ -250,11 +392,11 @@ special, incidental, or consequential loss or damage
 (including loss of data, profits, goodwill, or any type of
 loss or damage suffered as a result of any action brought
 by a third party) even if such damage or loss was
-reasonably foreseeable or Xilinx had been advised of the
+reasonably foreseeable or AMD had been advised of the
 possibility of the same.
 
 CRITICAL APPLICATIONS
-Xilinx products are not designed or intended to be fail-
+AMD products are not designed or intended to be fail-
 safe, or for use in any application requiring fail-safe
 performance, such as life-support or safety devices or
 systems, Class III medical devices, nuclear facilities,
@@ -263,7 +405,7 @@ other applications that could lead to death, personal
 injury, or severe property or environmental damage
 (individually and collectively, "Critical
 Applications"). Customer assumes the sole risk and
-liability of any use of Xilinx products in Critical
+liability of any use of AMD products in Critical
 Applications, subject only to applicable laws and
 regulations governing limitations on product liability.
 

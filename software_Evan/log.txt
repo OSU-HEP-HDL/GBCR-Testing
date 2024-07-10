@@ -1,0 +1,243 @@
+Foils
+Days 1 and 2, #8H, GBCR2
+Days 1 and 2, #5E, ET2
+Day1 #1, #2, #3, #4, #5, #6, #7, #8, 3C, 4D, 6F, 7G
+Day2 #2B, chip location
+
+GBCR2 Z11 used in the beam. 
+GBCR2 167 not used
+ET2 #? used in the beam
+ET2 #9 board not used
+
+===================================================
+
+5/9 5:25 PM, started a new run. Everything was good. 
+
+==================================================
+5/10 
+
+7:53 AM, program stopped. checked. restsrted. everything was fine
+
+8:10 AM, Jingbo went down to install the DUTs.
+
+8:13 AM, ch3 a lot of errors. Then back (i2c ok, 129 mA ok, no error). 
+
+8:17 AM, restarted. everything was good. 
+
+8:30 AM, tested crate motion, (309, 152) original, moved 310, 311, 312, 309, 319, 242 (-67)
+data still good. 
+
+10:05 AM, added a fuse in 233 V bias loop. 
+
+? , Ch8 lot of errors, then not heart beat, but ch0-7 recovered, Ch8 lost
+
+11:55 AM, inspected
+
+11:57 AM, restarted FPGA and the main.py program
+ch3 lots erros
+then ch8 lots of errors
+ch0-7 normal, but no ch8
+
+12:00 PM, restarted FPGA and main.py
+after ch3 and ch8 errors, ok
+
+12:01 PM, restarted
+
+12:03 PM, restarted, still ch8 not back to normal
+
+12:07 PM, inspection done
+restarted, 
+
+12:12 PM, rewrote iic, restarted program
+
+12:18 PM, restarted
+Ch0-7 ok, ch8 no data. will not continue to start over
+rename data as _pre
+
+=================================================
+3:44 PM, about to start beam
+restarted the program main.py
+beam position x = 242 (309-67=242), y = 152
+beam not ready
+probably till 4:30 PM
+
+4:25 PM, calling MCR now
+
+4:30 PM, maybe start 15 minutes later
+
+4:49 PM, data ok, no beam
+
+5:03 PM, 3 people came to the beam room and left
+
+5:12 PM, beam come shortly
+
+==================================================
+5:15 PM, in 1 minute
+
+5:16 PM, beam started (supposed)
+
+5:21 PM, still no error in labjack
+
+5:23 PM, a large pulse
+no error
+
+5:29 PM, a large pulse in labjack
+
+5:38 PM, no error
+
+5:39 PM, a large pulse in labjack
+
+5:53 PM, a large pulse in labjack
+
+6:39 PM, no error, i2c ok, idd 124 mA
+
+7:32 PM, asked to stop the beam, no error so far. 
+waited for 5 minutes
+stopped the program
+
+======================================================
+7:39 PM, restarted the program
+
+======================================================
+5/11 Wednesday
+8:58 AM, restarted the main program. Still no error. i2c ok. Idd 124 mA. 
+
+9:45 AM, work in beam room done
+DUTs back to center of the beam (309)
+use tape to fix the board position
+take off the Al foils and store
+put a new foil (2B) back to the beam (after 9:55) (GBCR2 and ET2 board not touched)
+add Ch7 amplifier signal (the center) to BNC cable #15
+
+found I2C error.
+After rewrite, read ok
+restart main.py. I2C ok. Idd 124 mA.
+
+ET2 still OK.
+
+10:25 AM, lanjack run 5 minutes, no large pulse
+
+10:39 AM, Sue in meeting. Beam in 20 minutes
+
+11:01 AM, beam in 5 minutes
+
+11:02 AM, lot of errors
+then back to normal for a while
+lots of errors
+back to error injection
+
+11:22 Am, moved 309 to 304 mm, but moving table not working.
+still lots of errors
+
+11:36 AM, reset position to 0 mm, then back to 304 mm
+at 0 mm, no error
+at 304 mm, lots of errors
+
+11:49 AM, moved to 299 mm
+lots of errors
+
+12:01 PM, moved to 294 mm
+lots of errors
+
+12:14 PM, moved to 289 mm
+lots of errors
+
+12:26 PM, moved to 279 mm
+ch3 continuous errors at low rate
+
+
+12:34 PM, redownlod FPGA
+restart main.py
+no flush error
+only injection error
+leave for lunch
+
+12:53 PM, I2C error
+
+1:25 PM, stopped main.py
+run iic.py. Still i2c errors.
+a few times, always errors.
+
+1:30 PM, restarted main.py with i2c all read back 255
+
+1:53 PM, ET2 i2c program dead
+
+2:24 PM, unplug ISS USB cable and plug back
+restart ET2main_read.py
+ET2 I2C OK
+
+2:27 PM, ET2 I2C dead again
+plug and plug back
+restart i2cmain_read.py
+ET2 I2C ok
+
+
+2:31 PM, re-program FPGA
+restart main.py
+i2c still error (255)
+idd 124 mA
+7 RX and 1 TX ok
+
+3:38 PM, normal
+
+4:34 PM, stopped main.py
+program stopped. Data to 4:02 PM. 
+prepare to move
+
+
+4:36 PM, move to 281 mm
+data OK.
+
+4:40 PM, program main.py stopped
+restarted
+data ok. 
+
+4:42 PM, move to 283 mm.
+data OK
+
+4:47 PM, move to 285 mm
+data OK
+
+4:52 PM, move to 287 mm
+errors
+
+4:56 PM, move to 285 mm
+errors
+
+4:59 PM, move to 383 mm
+ch4 low error rate
+
+5:02 PM, move to 281 mm
+
+5:20 PM, beam stopped
+
+5:24 PM, restart program
+copy data
+
+=====================================
+5/12 
+7:58 AM, come to the lab
+program stopped at 3:07:52 AM
+I2C back before program stopped.
+
+8:03 AM, restart main.py
+I2C ok
+Idd 123 mA
+data no error (including ch8)
+
+
+8:18 AM, stopped everything
+Disassemble everything
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 

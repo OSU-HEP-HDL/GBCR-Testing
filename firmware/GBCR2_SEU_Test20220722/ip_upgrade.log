@@ -1,3 +1,218 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:14 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vio_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vio_0 (xilinx.com:ip:vio:3.0) from (Rev. 19) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:13 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tri_mode_ethernet_mac_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of tri_mode_ethernet_mac_0 (xilinx.com:ip:tri_mode_ethernet_mac:9.0) from (Rev. 13) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:12 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'gtwizard_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of gtwizard_0 (xilinx.com:ip:gtwizard:3.6) from (Rev. 13) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:11 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_128to32_depth16k'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fifo_128to32_depth16k (xilinx.com:ip:fifo_generator:13.2) from (Rev. 5) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:10 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_128to128_depth1k'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fifo_128to128_depth1k (xilinx.com:ip:fifo_generator:13.2) from (Rev. 5) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:09 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo8to32'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fifo8to32 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 5) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:08 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo36x512'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of fifo36x512 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 5) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'fifo36x512'. These changes may impact your design.
+
+
+-Upgrade has added port 'rd_rst_busy'
+
+-Upgrade has added port 'wr_rst_busy'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:33:07 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo32to8'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of fifo32to8 (xilinx.com:ip:fifo_generator:13.2) from (Rev. 5) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'fifo32to8'. These changes may impact your design.
+
+
+-Upgrade has added port 'rd_rst_busy'
+
+-Upgrade has added port 'wr_rst_busy'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Jun 26 18:31:39 2024
+| Host         : OSUTeststand2 running 64-bit Ubuntu 24.04 LTS
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clockwiz'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of clockwiz (xilinx.com:ip:clk_wiz:6.0) from (Rev. 6) to (Rev. 14)
+
+
+
+
+
+
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020

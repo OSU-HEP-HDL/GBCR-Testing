@@ -1,0 +1,38 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to128_depth1k/sim/fifo_128to128_depth1k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_128to128_depth1k
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/ip/fifo_128to32_depth16k/sim/fifo_128to32_depth16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_128to32_depth16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2_SEU_20211220_7RX/GBCR2_SEU_Test.ip_user_files/ip/ila_3/sim/ila_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/CRC32_8gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_8gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/CRC32gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/DESER32b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DESER32b
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/DataX0Y3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataX0Y3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Aggregator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Aggregator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Checker
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Source.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Source
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_generator_160M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_generator_160M
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/PRBS31Gen32b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRBS31Gen32b
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/PRBS31_Seed_Checker.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRBS31_Seed_Checker
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/PRBS7Gen32b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRBS7Gen32b
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/SER32b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SER32b
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/SearchSamplePoint.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SearchSamplePoint
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/GBCR2_SEU_Test.srcs/sources_1/new/Tx_PRBS7_Data_Checker.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Tx_PRBS7_Data_Checker
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/dataPrbs7Check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataPrbs7Check
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/xilinxtrain/GBCR2/GBCR2_SEU_Test20220421/src/Data_Checker_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Checker_tb
