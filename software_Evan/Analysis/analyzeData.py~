@@ -1,0 +1,37 @@
+import glob
+
+inDir = "/home/hep/Desktop/GBCR_Work/software_Evan/QAResults_3/2024-07-11_00-12-52/*"
+
+allFiles = glob.glob(inDir)
+chFiles = [thisFile for thisFile in allFiles if "Ch" in thisFile]
+
+for thisFile in chFiles:
+    if("All" in thisFile):
+        continue
+    inFile = open(thisFile)
+    allLines = inFile.readlines()
+    finalLine = allLines[-1].split()
+    finalInjection = int(finalLine[3]); finalError = int(finalLine[4])
+
+    pError = 0; fInd = -1
+    for iL in range(len(allLines)):
+        thisLine = allLines[iL].split()
+        thisError = int(thisLine[4])
+
+        if(iL==0):
+            pError = thisError
+            continue
+
+        dError = thisError - pError
+        if(dError > 50):
+            fInd = iL
+            break
+        pError = thisError
+
+    firstLine = allLines[fInd].split()
+    firstInjection = int(firstLine[3]); firstError = int(firstLine[4])
+
+    splitFile = thisFile.split('/')
+    chName = splitFile[-1]
+    delta = finalError - firstError
+    print(chName+": "+str(finalInjection) + " "+str(delta))

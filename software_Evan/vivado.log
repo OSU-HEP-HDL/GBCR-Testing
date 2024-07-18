@@ -1,0 +1,379 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Jul 10 23:21:40 2024
+# Process ID: 2239426
+# Current directory: /home/hep/Desktop/GBCR_Work/software_Evan
+# Command line: vivado -mode tcl
+# Log file: /home/hep/Desktop/GBCR_Work/software_Evan/vivado.log
+# Journal file: /home/hep/Desktop/GBCR_Work/software_Evan/vivado.jou
+# Running On        :OSUTeststand2
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-8500T CPU @ 2.10GHz
+# CPU Frequency     :2400.493 MHz
+# CPU Physical cores:6
+# CPU Logical cores :6
+# Host memory       :16584 MB
+# Swap memory       :4294 MB
+# Total Virtual     :20879 MB
+# Available Virtual :8172 MB
+#-----------------------------------------------------------
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+current_hw_device [lindex [get_hw_devices] 0]
+WARNING: [Labtoolstcl 44-128] No matching hw_devices were found.
+clear
+WARNING: [Common 17-259] Unknown Tcl command 'clear' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/12345]
+WARNING: [Labtoolstcl 44-133] No matching hw_targets were found.
+Resolution: Use the connect_hw_server command to open a connection to a server and then rerun the get_hw_targets command.
+WARNING: [Labtools 27-1340] No hw_server is connected.
+Use the connect_hw_server command to open a connection to a hw_server
+and then use open_hw_target command to open a target on that server
+before running the current_hw_target command.
+connect_hw_server -url localhost:3121
+ERROR: [Labtoolstcl 44-235] The labtools system is not initialized. You must execute 'open_hw_manager' to initialize the labtools system prior using this command.
+open_hw_manager 
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_hw_manager' was cancelled
+open_hw_manager
+connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Apr 26 2024-20:40:49
+    **** Build number : 2024.1.1714182049
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/12345]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: localhost
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+refresh_hw_server
+get_hw_targers
+invalid command name "get_hw_targers"
+get_hw_targets
+localhost:3121/xilinx_tcf/Digilent/210203A10174A localhost:3121/xilinx_tcf/Digilent/210203B32A63A localhost:3121/xilinx_tcf/Digilent/210203B32A91A localhost:3121/xilinx_tcf/Digilent/210203B329C6A
+refresh_hw_device
+ERROR: [Labtools 27-112] Target is not connected
+current_hw_target
+localhost:3121/xilinx_tcf/Digilent/210203A10174A
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203A10174A
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722}
+ERROR: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info.
+set_property -help
+set_property
+
+Description: 
+Set property on object(s)
+
+Syntax: 
+set_property  [-dict <args>] [-quiet] [-verbose] <name> <value> <objects>...
+
+Usage: 
+  Name        Description
+  -----------------------
+  [-dict]     list of name/value pairs of properties to set
+  [-quiet]    Ignore command errors
+  [-verbose]  Suspend message limits during command execution
+  <name>      Name of property to set. Not valid with -dict option
+  <value>     Value of property to set. Not valid with -dict option
+  <objects>   Objects to set properties on
+
+Categories: 
+Object, PropertyAndParameter, XDC
+
+Description:
+
+  Assigns the defined property <name> and <value> to the specified <objects>.
+
+  This command can be used to define any property on an object in the design.
+  Each object has a set of predefined properties that have expected values,
+  or a range of values. The set_property command can be used to define the
+  values for these properties. To determine the defined set of properties on
+  an object, use report_property, list_property, or list_property_values.
+
+  You can also define custom properties for an object, by specifying a unique
+  <name> and <value> pair for the object. If an object has custom properties,
+  these will also be reported by the report_property and list_property
+  commands.
+
+  This command returns nothing if successful, and an error if it fails.
+
+  Tip: You can use the get_property command to validate any properties that
+  have been set on an object.
+
+Arguments:
+
+  -dict - (Optional) Use this option to specify a dictionary of multiple
+  properties (<name> <value> pairs) on an object with a single set_property
+  command. Multiple <name> <value> pairs must be enclosed in quotes, "", or
+  braces, {}.
+
+    -dict "name1 value1 name2 value2 ... nameN valueN"
+
+  Important: When writing the constraints for a design using either
+  save_constraints, save_constraints_as, or write_xdc, the properties
+  specified using the -dict option will be written as separate set_property
+  commands for each name/value pair. If you don`t want the XDC constraints to
+  be expanded in this manner, you can either use the Tcl script driven
+  approach in a non-project design, or use a Tcl script as a design source in
+  your constraint set. Refer to Vivado Design Suite User Guide: Design Flows
+  Overview (UG892) for more information on non-project based design, or refer
+  to Vivado Design Suite User Guide: Using Constraints (UG903) for more
+  information on using Tcl scripts in constraint sets.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <name> - (Required) Specifies the name of the property to be assigned to
+  the object or objects. The <name> argument is case sensitive and should be
+  specified appropriately.
+
+  <value> - (Required) Specifies the value to assign to the <name> on the
+  specified object or objects. The value is checked against the property type
+  to ensure that the value is valid. If the value is not appropriate for the
+  property an error will be returned.
+
+  Important: In some cases, the value of a property includes special
+  characters, such as the dash character (`-`), which can cause the tool to
+  interpret the value as a new argument to the command. In this case, you
+  must use the explicit arguments (-name, -value, -objects) instead of the
+  implied positional arguments (name, value, objects) as described here. This
+  is shown in the Examples section below.
+
+  <objects> - (Required) One or more objects to assign the property to.
+
+Examples:
+
+  Create a user-defined boolean property, TRUTH, for cell objects, and set
+  the property on a cell:
+
+    create_property -type bool truth cell
+    set_property truth false [lindex [get_cells] 1]
+
+  Use the -dict option to specify multiple properties at one time on the
+  current design:
+
+    set_property -dict "POST_CRC enable POST_CRC_ACTION correct_and_continue" \
+    [current_design]
+
+  The following example sets the TOP property of the current fileset to
+  define the top module of the project:
+
+    set_property top fftTop [current_fileset]
+    set_property top_file {C:/Data/sources/fftTop.v} [current_fileset]
+
+  Note: Defining the top module requires the TOP property to be set to the
+  desired hierarchical block in the source fileset of the current project. In
+  the preceding example TOP is the property name, fftTop is the value, and
+  current_fileset is the object. In addition, the TOP_FILE property should be
+  defined to point to the data source for the top module.
+
+  This example shows how to set a property value that includes the dash
+  character, `-`. The dash can cause the tool to interpret the value as a new
+  command argument, rather than part of the value being specified, and will
+  cause an error as shown. In this case, you must use the explicit form of
+  the positional arguments in the set_property command:
+
+    set_property {XELAB.MORE_OPTIONS} {-pulse_e_style ondetect} \
+       [get_filesets sim_1]
+    ERROR: [Common 17-170] Unknown option `-pulse_e_style ondetect`,
+     please type `set_property -help` for usage info.
+    set_property -name {XELAB.MORE_OPTIONS} -value {-pulse_e_style ondetect}\
+       -objects [get_filesets sim_1]
+
+  The following example sets the internal VREF property value for the
+  specified IO Bank:
+
+    set_property internal_vref {0.75} [get_iobanks 0]
+
+  The following example defines a DCI Cascade by setting the DCI_CASCADE
+  property for the specified IO Bank:
+
+    set_property DCI_CASCADE {14} [get_iobanks 0 ]
+
+  The following example configures the synth_1 run, setting options for AMD
+  Vivado Synthesis 2013, and then launches the synthesis run:
+
+    set_property flow {Vivado Synthesis 2016} \
+       [get_runs synth_1]
+    set_property STEPS.SYNTH_DESIGN.ARGS.GATED_CLOCK_CONVERSION on \
+       [get_runs synth_1]
+    set_property STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION one_hot \
+       [get_runs synth_1]
+    launch_runs synth_1
+
+  This example is the same as the prior example, except that it uses the
+  -dict option to set all the properties on the synthesis run in a single
+  set_property command:
+
+    set_property -dict [ list flow {Vivado Synthesis 2016} \
+       STEPS.SYNTH_DESIGN.ARGS.GATED_CLOCK_CONVERSION on \
+       STEPS.SYNTH_DESIGN.ARGS.FSM_EXTRACTION \
+       one_hot ] [get_runs synth_1]
+    launch_runs synth_1
+
+See Also:
+
+   *  current_fileset
+   *  create_property
+   *  create_run
+   *  get_cells
+   *  get_property
+   *  get_runs
+   *  launch_runs
+   *  list_property
+   *  list_property_value
+   *  report_property
+   *  reset_property
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722} [lindex [get_hw_devices] 0]
+ERROR: [Labtools 27-3404] Incorrect program file format.  Please use: bit, rbt, or bin file.
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1395.598 ; gain = 0.000 ; free physical = 1078 ; free virtual = 7506
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) .
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+refresh_hw_device
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) .
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+get_hw_targets
+localhost:3121/xilinx_tcf/Digilent/210203A10174A localhost:3121/xilinx_tcf/Digilent/210203B32A63A localhost:3121/xilinx_tcf/Digilent/210203B32A91A localhost:3121/xilinx_tcf/Digilent/210203B329C6A
+current_hw_target
+localhost:3121/xilinx_tcf/Digilent/210203A10174A
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+localhost:3121/xilinx_tcf/Digilent/210203B32A63A
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203A10174A]
+localhost:3121/xilinx_tcf/Digilent/210203A10174A
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203A10174A
+current_hw_device [lindex [get_hw_devices] 0]
+xc7k325t_0
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1451.605 ; gain = 0.000 ; free physical = 1066 ; free virtual = 7499
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) .
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+localhost:3121/xilinx_tcf/Digilent/210203B32A63A
+open_hw_target
+ERROR: [Labtoolstcl 44-378] Target is already opened
+# Program and Refresh the XC7K325T Device
+current_hw_device [lindex [get_hw_devices] 0]
+xc7k325t_0
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+# set_property PROBES.FILE {C:/design.ltx} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1452.605 ; gain = 1.000 ; free physical = 1039 ; free virtual = 7484
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) .
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A91A]
+localhost:3121/xilinx_tcf/Digilent/210203B32A91A
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B329C6A]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+localhost:3121/xilinx_tcf/Digilent/210203B32A63A
+open_hw_target
+ERROR: [Labtoolstcl 44-378] Target is already opened
+# Program and Refresh the XC7K325T Device
+current_hw_device [lindex [get_hw_devices] 0]
+xc7k325t_0
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+# set_property PROBES.FILE {C:/design.ltx} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1452.605 ; gain = 0.000 ; free physical = 1074 ; free virtual = 7507
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) .
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203A10174A]
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A91A]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B329C6A]
+localhost:3121/xilinx_tcf/Digilent/210203B329C6A
+open_hw_target
+ERROR: [Labtoolstcl 44-378] Target is already opened
+# Program and Refresh the XC7K325T Device
+current_hw_device [lindex [get_hw_devices] 0]
+xc7k325t_0
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+# set_property PROBES.FILE {C:/design.ltx} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1452.605 ; gain = 0.000 ; free physical = 1056 ; free virtual = 7490
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) .
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 10 23:43:40 2024...

@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Jul 10 23:21:40 2024
+# Process ID: 2239426
+# Current directory: /home/hep/Desktop/GBCR_Work/software_Evan
+# Command line: vivado -mode tcl
+# Log file: /home/hep/Desktop/GBCR_Work/software_Evan/vivado.log
+# Journal file: /home/hep/Desktop/GBCR_Work/software_Evan/vivado.jou
+# Running On        :OSUTeststand2
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-8500T CPU @ 2.10GHz
+# CPU Frequency     :2400.493 MHz
+# CPU Physical cores:6
+# CPU Logical cores :6
+# Host memory       :16584 MB
+# Swap memory       :4294 MB
+# Total Virtual     :20879 MB
+# Available Virtual :8172 MB
+#-----------------------------------------------------------
+ls
+current_hw_device [lindex [get_hw_devices] 0]
+clear
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/12345]
+connect_hw_server -url localhost:3121
+open_hw_manager 
+open_hw_manager
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/12345]
+refresh_hw_server
+get_hw_targers
+get_hw_targets
+refresh_hw_device
+current_hw_target
+open_hw_target
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722}
+set_property -help
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device
+get_hw_targets
+current_hw_target
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203A10174A]
+open_hw_target
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+open_hw_target
+# Program and Refresh the XC7K325T Device
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+# set_property PROBES.FILE {C:/design.ltx} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A91A]
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B329C6A]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+open_hw_target
+# Program and Refresh the XC7K325T Device
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+# set_property PROBES.FILE {C:/design.ltx} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203A10174A]
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A63A]
+#current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A91A]
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B329C6A]
+open_hw_target
+# Program and Refresh the XC7K325T Device
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/hep/Desktop/GBCR_Work/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [lindex [get_hw_devices] 0]
+# set_property PROBES.FILE {C:/design.ltx} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]

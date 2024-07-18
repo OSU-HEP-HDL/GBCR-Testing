@@ -13,16 +13,16 @@ import threading
 
 todaystr = "QAResults"
 #userdefine_dir = todaystr + '/222'
-userdefine_dir = todaystr + '/C0021'
-
+#userdefine_dir = todaystr + '/C0021'
+userdefine_dir = './QAResults_3/2024-07-11_11-32-37'
 store_dict = userdefine_dir
 
 err_flag = 0
 ch_flag = 0
 
 for ch_id in range(9):
-    ch_file = userdefine_dir + '/Ch' + str(ch_id) + '.txt'
-    #print(ch_file)
+    ch_file = userdefine_dir + '/Ch' + str(ch_id) + '.TXT'
+    print(ch_file)
     globals()['err_diff_len%s' % ch_id] = 0
     if exists(ch_file):
         globals()['err_diff%s' % ch_id] = []

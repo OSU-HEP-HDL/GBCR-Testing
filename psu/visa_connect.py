@@ -1,38 +1,83 @@
 import pyvisa as vs
 import serial as ps
-import string
+from datetime import datetime
 import time
 
-#Create Serial Manager
-#ser = ps.Serial('/dev/ttyUSB9')
-#serials = ['++addr 5', '++addr 0']
+# instName = 'TCPIP::192.168.2.10::inst0::INSTR'
+# fpgaMap = {"": {"CH1": "1", "CH2": "2"}}
 
-#Create Resource Manager
-rm = vs.ResourceManager()
-#inst = rm.open_resource('ASRL/dev/ttyUSB9::INSTR')
-#inst.baud_rate = 9600
-inst = rm.open_resource('TCPIP::192.168.2.10::inst0::INSTR')
+instName = 'ASRL/dev/ttyUSB9::INSTR'
+fpgaMap = {b"++addr 1\n": {"OUTP1": "4", "OUTP2": "3"},
+           b"++addr 5\n": {"OUTP1": "5", "OUTP2": "6"}}
 
-print(inst.query_ascii_values("INST?", converter='s'))
+def setVoltage(ser, inst):
+    global fpgaMap
 
-#print(rm.list_resources())
-#inst = rm.open_resource('GPIB::5::INSTR')
-#vals = inst.query_ascii_values('MEAS:CURR? (@1,2)')
+    print("TURNING POWER SUPPLIES ON")
+    isOn = inst.query_ascii_values('OUTP?')
+    if(isOn[0]==1):
+        inst.write('OUTP OFF')
+    
+    for thisSer in fpgaMap.keys():
+        channels = fpgaMap[thisSer]
+        for thisChan in channels.keys():
+            channelSel = "INST:SEL "+thisChan
+            if(thisSer!=''):
+                ser.write(thisSer); time.sleep(0.5)
+            inst.write(channelSel); time.sleep(0.5)
+            inst.write("APPL 1.26, 0.25"); time.sleep(0.5)
+        inst.write('OUTP ON'); time.sleep(0.5)
 
-#Set Voltage and CUrrent
-# isOn = inst.query_ascii_values('OUTP?')
-# if(isOn[0]==1):
-#     inst.query_ascii_values('OUTP OFF')
+def turnPowerOff(ser, inst):
+    global fpgaMap
 
-# #inst.query_ascii_values('INST:SEL OUTP1')
-# #inst.query_ascii_values('VOLT 0.5')
-# #vals2 = inst.query_ascii_values('MEAS:CURR?')
-# #print(vals2)
+    print("TURNING POWER SUPPLIES OFF")
+    for thisSer in fpgaMap.keys():
+        channels = fpgaMap[thisSer]
+        for thisChan in channels.keys():
+            channelSel = "INST:SEL "+thisChan
+            if(thisSer!=''):
+                ser.write(thisSer)
+            inst.write(channelSel); time.sleep(0.5)
+        inst.write('OUTP OFF'); time.sleep(0.5)
 
-# i==0
-# while(i<10000000):
-#     for thisSer in serials:
-#         ser.write(thisSer)
-#         currents = isnt.query_ascii_values('MEAS:CURR?')
-#     time.sleep(30)
-#     i+=1
+def recordCurrent(ser, inst):
+    global fpgaMap
+
+    currFile = open("./Currents.txt", 'w')
+    currFile.write("IP Address - Time - Current (A)\n")
+    i = 0
+    currents = ""
+    while(i<2000):
+        print("("+str(i)+"/2000) Still Recording Currents: "+currents)
+        thisTime = datetime.now().strftime("%H_%M_%S")
+        currents = ""
+        for thisSer in fpgaMap.keys():
+            channels = fpgaMap[thisSer]
+            for thisChan in channels.keys():
+                channelSel = "INST:SEL "+thisChan
+                if(thisSer!=''):
+                    ser.write(thisSer); time.sleep(0.5)
+                inst.write(channelSel); time.sleep(0.5)
+                vals = inst.query_ascii_values('MEAS:CURR?')
+                thisIP = channels[thisChan]
+                currents += str(vals[0]) + ", "
+                currString = thisIP + " - " + thisTime + " - " + str(vals[0])+"\n"
+                currFile.write(currString)
+
+        time.sleep(60)
+        i+=1
+    currFile.close()
+            
+if __name__ == "__main__":    
+    rm = vs.ResourceManager()
+    inst = rm.open_resource(instName)
+    ser = ""
+
+    if(instName=='ASRL/dev/ttyUSB9::INSTR'):
+        inst.baud_rate = 9600
+        ser = ps.Serial('/dev/ttyUSB9')
+
+    #setVoltage(ser, inst)
+    recordCurrent(ser, inst)
+    #turnPowerOff(ser, inst)
