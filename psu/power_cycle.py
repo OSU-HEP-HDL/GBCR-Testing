@@ -2,9 +2,10 @@ import pyvisa as vs
 import serial as ps
 import time
 
-instName = 'ASRL/dev/ttyUSB1::INSTR'
-serNum = b"++addr 1\n"
-#serNum = b"++addr 5\n"
+#instName = 'ASRL/dev/ttyUSB1::INSTR'
+instName = 'ASRL/dev/ttyUSB0::INSTR'
+#serNum = b"++addr 1\n"
+serNum = b"++addr 5\n"
 
 def powerCycle(ser, inst):
     ser.write(serNum); time.sleep(0.5)
@@ -27,8 +28,8 @@ if __name__ == "__main__":
     inst = rm.open_resource(instName)
     ser = ""
 
-    if(instName=='ASRL/dev/ttyUSB1::INSTR'):
+    if(instName=='ASRL/dev/ttyUSB0::INSTR'):
         inst.baud_rate = 9600
-        ser = ps.Serial('/dev/ttyUSB1')
+        ser = ps.Serial('/dev/ttyUSB0')
 
     powerCycle(ser, inst)

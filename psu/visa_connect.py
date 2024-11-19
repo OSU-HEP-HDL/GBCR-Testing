@@ -6,7 +6,8 @@ import time
 # instName = 'TCPIP::192.168.2.10::inst0::INSTR'
 # fpgaMap = {"": {"CH1": "1", "CH2": "2"}}
 
-instName = 'ASRL/dev/ttyUSB9::INSTR'
+#instName = 'ASRL/dev/ttyUSB9::INSTR'
+instName = 'ASRL/dev/ttyUSB0::INSTR'
 fpgaMap = {b"++addr 1\n": {"OUTP1": "4", "OUTP2": "3"},
            b"++addr 5\n": {"OUTP1": "5", "OUTP2": "6"}}
 
