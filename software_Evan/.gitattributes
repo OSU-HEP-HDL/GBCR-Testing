@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 run3.tar.xz filter=lfs diff=lfs merge=lfs -text
 run4.tar.gz filter=lfs diff=lfs merge=lfs -text
 run3/QAResults_3 filter=lfs diff=lfs merge=lfs -text
 run3/QAResults_4 filter=lfs diff=lfs merge=lfs -text
 run3/QAResults_5 filter=lfs diff=lfs merge=lfs -text
 run3/QAResults_6 filter=lfs diff=lfs merge=lfs -text
+=======
+run4.tar.gz filter=lfs diff=lfs merge=lfs -text
+run3.tar.xz filter=lfs diff=lfs merge=lfs -text
+run3/* filter=lfs diff=lfs merge=lfs -text
+run3/QAResults_5/2024-07-11_00-13-03/Ch1.TXT filter=lfs diff=lfs merge=lfs -text
+run3/QAResults_5/2024-07-11_00-13-03/Ch3.TXT filter=lfs diff=lfs merge=lfs -text
+run3/QAResults_5/2024-07-11_00-13-03/ChAll.TXT filter=lfs diff=lfs merge=lfs -text
+>>>>>>> main
