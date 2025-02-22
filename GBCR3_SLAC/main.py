@@ -23,7 +23,7 @@ from GBCR3_Reg import *
 
 from crc32_8 import crc32_8
 
-hostname = '192.168.2.6'  # Fixed FPGA IP address
+hostname = '192.168.2.4'  # Fixed FPGA IP address
 port = 1024  # port number
 
 # ---------------------------
