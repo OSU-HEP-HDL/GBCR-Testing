@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="tri_mode_ethernet_mac_0_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1719444817">
   <File Type="RDS-DCP" Name="tri_mode_ethernet_mac_0.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="tri_mode_ethernet_mac_0_utilization_synth.pb"/>
+  <File Type="RDS-RDS" Name="tri_mode_ethernet_mac_0.vds"/>
+  <File Type="REPORTS-TCL" Name="tri_mode_ethernet_mac_0_reports.tcl"/>
   <File Type="PA-TCL" Name="tri_mode_ethernet_mac_0.tcl"/>
   <File Type="RDS-UTIL" Name="tri_mode_ethernet_mac_0_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="tri_mode_ethernet_mac_0_reports.tcl"/>
-  <File Type="RDS-RDS" Name="tri_mode_ethernet_mac_0.vds"/>
+  <File Type="RDS-UTIL-PB" Name="tri_mode_ethernet_mac_0_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tri_mode_ethernet_mac_0" RelGenDir="$PGENDIR/tri_mode_ethernet_mac_0">
     <File Path="$PPRDIR/ipcore_dir/tri_mode_ethernet_mac_0/tri_mode_ethernet_mac_0.xci">
       <FileInfo>

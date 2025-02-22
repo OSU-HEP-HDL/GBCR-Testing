@@ -13,3 +13,14 @@ psu/.#visa_connect.py
 software_Evan/QAResults_3/
 
 software_Evan/QAResults_6/
+software_Evan/__pycache__/command_interpret.cpython-312.pyc
+software_Evan/__pycache__/GBCR2_Reg.cpython-312.pyc
+GBCR3_SLAC/__pycache__/GBCR3_Reg.cpython-312.pyc
+GBCR3_SLAC/__pycache__/crc32_8.cpython-312.pyc
+GBCR3_SLAC/__pycache__/command_interpret.cpython-312.pyc
+GBCR3_SLAC/__pycache__/binhex.cpython-312.pyc
+QAResults*
+__pycache__
+software_Evan/__pycache__/command_interpret.cpython-312.pyc
+software_Evan/__pycache__/GBCR2_Reg.cpython-312.pyc
+

@@ -3,11 +3,6 @@
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="GBCR2_SEU_Test_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="GBCR2_SEU_Test_routed.rqs"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BGN" Name="GBCR2_SEU_Test.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="GBCR2_SEU_Test.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="GBCR2_SEU_Test.ltx"/>
   <File Type="RBD_FILE" Name="GBCR2_SEU_Test.rbd"/>
   <File Type="NPI_FILE" Name="GBCR2_SEU_Test.npi"/>
   <File Type="RNPI_FILE" Name="GBCR2_SEU_Test.rnpi"/>
@@ -15,75 +10,66 @@
   <File Type="RCFI_FILE" Name="GBCR2_SEU_Test.rcfi"/>
   <File Type="PL-PDI-FILE" Name="GBCR2_SEU_Test_pld.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="GBCR2_SEU_Test_boot.pdi"/>
-  <File Type="RDI-RDI" Name="GBCR2_SEU_Test.vdi"/>
-  <File Type="PDI-FILE" Name="GBCR2_SEU_Test.pdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="GBCR2_SEU_Test_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="GBCR2_SEU_Test_postroute_physopt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="GBCR2_SEU_Test_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="GBCR2_SEU_Test_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="GBCR2_SEU_Test_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="GBCR2_SEU_Test_placed.dcp"/>
+  <File Type="OPT-DCP" Name="GBCR2_SEU_Test_opt.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="GBCR2_SEU_Test_timing_summary_routed.pb"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="GBCR2_SEU_Test_routed_bb.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="GBCR2_SEU_Test_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="GBCR2_SEU_Test_routed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="GBCR2_SEU_Test_incremental_reuse_pre_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="GBCR2_SEU_Test.hwdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="GBCR2_SEU_Test.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="GBCR2_SEU_Test.sysdef"/>
   <File Type="BITSTR-MMI" Name="GBCR2_SEU_Test.mmi"/>
   <File Type="BITSTR-BMM" Name="GBCR2_SEU_Test_bd.bmm"/>
   <File Type="BITSTR-NKY" Name="GBCR2_SEU_Test.nky"/>
   <File Type="BITSTR-RBT" Name="GBCR2_SEU_Test.rbt"/>
-  <File Type="BITSTR-MSK" Name="GBCR2_SEU_Test.msk"/>
-  <File Type="BG-BIN" Name="GBCR2_SEU_Test.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="BG-BIT" Name="GBCR2_SEU_Test.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="GBCR2_SEU_Test_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="GBCR2_SEU_Test_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="GBCR2_SEU_Test_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="GBCR2_SEU_Test_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="GBCR2_SEU_Test_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="GBCR2_SEU_Test_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="GBCR2_SEU_Test_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="GBCR2_SEU_Test_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="GBCR2_SEU_Test.drc"/>
-  <File Type="ROUTE-RQS-PB" Name="GBCR2_SEU_Test_rqs_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="GBCR2_SEU_Test_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="GBCR2_SEU_Test_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="GBCR2_SEU_Test_bus_skew_routed.rpt"/>
-  <File Type="PA-TCL" Name="GBCR2_SEU_Test.tcl"/>
-  <File Type="INIT-TIMING" Name="GBCR2_SEU_Test_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="GBCR2_SEU_Test_opt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="GBCR2_SEU_Test_rqa_opted.pb"/>
-  <File Type="OPT-DRC" Name="GBCR2_SEU_Test_drc_opted.rpt"/>
-  <File Type="PLACE-TIMING" Name="GBCR2_SEU_Test_timing_summary_placed.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="GBCR2_SEU_Test_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="GBCR2_SEU_Test_utilization_placed.pb"/>
-  <File Type="OPT-HWDEF" Name="GBCR2_SEU_Test.hwdef"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="GBCR2_SEU_Test_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="REPORTS-TCL" Name="GBCR2_SEU_Test_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="GBCR2_SEU_Test_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="GBCR2_SEU_Test_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="GBCR2_SEU_Test_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="GBCR2_SEU_Test_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="GBCR2_SEU_Test_placed.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="GBCR2_SEU_Test_rqa_placed.pb"/>
+  <File Type="PDI-FILE" Name="GBCR2_SEU_Test.pdi"/>
+  <File Type="RDI-RDI" Name="GBCR2_SEU_Test.vdi"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="GBCR2_SEU_Test_timing_summary_routed.rpt"/>
+  <File Type="BG-BIN" Name="GBCR2_SEU_Test.bin"/>
   <File Type="PLACE-IO" Name="GBCR2_SEU_Test_io_placed.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="GBCR2_SEU_Test_timing_summary_physopted.rpt"/>
-  <File Type="PLACE-CLK" Name="GBCR2_SEU_Test_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="GBCR2_SEU_Test_utilization_placed.rpt"/>
+  <File Type="OPT-DRC" Name="GBCR2_SEU_Test_drc_opted.rpt"/>
   <File Type="PLACE-CTRL" Name="GBCR2_SEU_Test_control_sets_placed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="GBCR2_SEU_Test_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="GBCR2_SEU_Test_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="GBCR2_SEU_Test_utilization_placed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="GBCR2_SEU_Test_timing_summary_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="GBCR2_SEU_Test_reports.tcl"/>
+  <File Type="PA-TCL" Name="GBCR2_SEU_Test.tcl"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="GBCR2_SEU_Test_methodology_drc_routed.pb"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="GBCR2_SEU_Test_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="GBCR2_SEU_Test_drc_routed.rpx"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="GBCR2_SEU_Test_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="GBCR2_SEU_Test_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="GBCR2_SEU_Test_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="GBCR2_SEU_Test_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="GBCR2_SEU_Test_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="GBCR2_SEU_Test_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="GBCR2_SEU_Test_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="GBCR2_SEU_Test_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="GBCR2_SEU_Test_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="GBCR2_SEU_Test_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="GBCR2_SEU_Test_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="GBCR2_SEU_Test_power_routed.rpx"/>
+  <File Type="BG-BGN" Name="GBCR2_SEU_Test.bgn"/>
+  <File Type="PLACE-UTIL" Name="GBCR2_SEU_Test_utilization_placed.rpt"/>
   <File Type="ROUTE-STATUS" Name="GBCR2_SEU_Test_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="GBCR2_SEU_Test_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="GBCR2_SEU_Test_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="GBCR2_SEU_Test_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="GBCR2_SEU_Test_timing_summary_routed.rpx"/>
+  <File Type="BG-DRC" Name="GBCR2_SEU_Test.drc"/>
+  <File Type="ROUTE-PWR" Name="GBCR2_SEU_Test_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="GBCR2_SEU_Test_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="GBCR2_SEU_Test_power_summary_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="GBCR2_SEU_Test_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="GBCR2_SEU_Test_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="GBCR2_SEU_Test_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="GBCR2_SEU_Test_drc_routed.pb"/>
   <File Type="ROUTE-SIMILARITY" Name="GBCR2_SEU_Test_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="GBCR2_SEU_Test_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="GBCR2_SEU_Test_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="GBCR2_SEU_Test_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="GBCR2_SEU_Test_bus_skew_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="GBCR2_SEU_Test.msk"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="GBCR2_SEU_Test_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="GBCR2_SEU_Test_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="GBCR2_SEU_Test_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="GBCR2_SEU_Test_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="GBCR2_SEU_Test_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="GBCR2_SEU_Test_bus_skew_postroute_physopted.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/CRC32_8gen.v">
@@ -503,14 +489,15 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_128to128_depth1k"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo32to8"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo8to32"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo36x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="clockwiz"/>
   <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
   <BlockFileSet Type="BlockSrcs" Name="tri_mode_ethernet_mac_0"/>
   <BlockFileSet Type="BlockSrcs" Name="gtwizard_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_128to32_depth16k"/>
-  <BlockFileSet Type="BlockSrcs" Name="clockwiz"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo36x512"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo8to32"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo32to8"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_128to128_depth1k"/>
 </GenRun>

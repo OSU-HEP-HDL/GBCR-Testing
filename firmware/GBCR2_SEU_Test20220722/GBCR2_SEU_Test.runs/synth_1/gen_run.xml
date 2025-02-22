@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1719514366">
-  <File Type="VDS-TIMINGSUMMARY" Name="GBCR2_SEU_Test_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="GBCR2_SEU_Test.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="GBCR2_SEU_Test_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="GBCR2_SEU_Test_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="GBCR2_SEU_Test_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="GBCR2_SEU_Test.vds"/>
   <File Type="REPORTS-TCL" Name="GBCR2_SEU_Test_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="GBCR2_SEU_Test_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="GBCR2_SEU_Test.tcl"/>
+  <File Type="RDS-UTIL" Name="GBCR2_SEU_Test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="GBCR2_SEU_Test_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/CRC32_8gen.v">
@@ -421,13 +418,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fifo32to8"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_128to128_depth1k"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo36x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="clockwiz"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo8to32"/>
   <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
   <BlockFileSet Type="BlockSrcs" Name="tri_mode_ethernet_mac_0"/>
   <BlockFileSet Type="BlockSrcs" Name="gtwizard_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_128to32_depth16k"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo8to32"/>
-  <BlockFileSet Type="BlockSrcs" Name="clockwiz"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo36x512"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_128to128_depth1k"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo32to8"/>
 </GenRun>
