@@ -42,7 +42,7 @@ def main():
 
     today = datetime.date.today()
     TimeD = time.strftime("%H-%M-%S", time.localtime())
-    todaystr = "QAResults"
+    todaystr = "QAResults_"+args["address"]
     timestr = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     try:
         os.mkdir(todaystr)
@@ -73,8 +73,7 @@ def generate_summary(result_dir):
     dump_file = f"{result_dir}/ChAll.TXT"
     if os.path.exists(dump_file):
         with open(dump_file, 'r') as in_file:
-            if(debug):
-                print(f"Opened dump file: {dump_file}") 
+            print(f"Opened dump file: {dump_file}") 
             lines = in_file.readlines()
     else:
         print(f"Error in opening result file: {dump_file}")
@@ -169,8 +168,8 @@ def generate_summary(result_dir):
             del_minute = (end_time[j] - start_time[j]) / 60 if end_time[j] and start_time[j] else 0
             with open(f"{result_dir}/summary.txt", 'a') as out_file:
                 out_file.write(f"Ch{j} {ch_chan:4} {chan_event[j]:5} {tstart:17} / {tend:9} {del_minute:6.1f} "
-                  f"{start_gen[j]:6} / {start_obs[j]:10}  {end_gen[j]:6} / {end_obs[j]:10}  "
-                  f"{end_gen[j] - start_gen[j]:6} / {end_obs[j] - start_obs[j]:7}\n")
+                               f"{start_gen[j]:6} / {start_obs[j]:10}  {end_gen[j]:6} / {end_obs[j]:10}  "
+                               f"{end_gen[j] - start_gen[j]:6} / {end_obs[j] - start_obs[j]:7}\n")
             print(f"Ch{j} {ch_chan:4} {chan_event[j]:5} {tstart:17} / {tend:9} {del_minute:6.1f} "
                   f"{start_gen[j]:6} / {start_obs[j]:10}  {end_gen[j]:6} / {end_obs[j]:10}  "
                   f"{end_gen[j] - start_gen[j]:6} / {end_obs[j] - start_obs[j]:7}")
@@ -362,10 +361,9 @@ def exec_data(mem_data, store_dict):
                     cal_crc32 = cal_crc32_t
 
                 Time = datetime.datetime.now()
-                if(debug):
-                    print('%s %d %d %d %d %d %08x %08x %08x %d' % (
-                        Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp,
-                        expected_code, received_code, error_position, crc32))
+                print('%s %d %d %d %d %d %08x %08x %08x %d' % (
+                    Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp,
+                    expected_code, received_code, error_position, crc32))
                 with open("./%s/ChAll.TXT" % store_dict,
                           'a') as infile:  # # 'a': add, will not cover previous infor
                     infile.write('%s %d %d %d %d %d %08x %08x %08x %d\n' % (
