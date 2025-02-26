@@ -199,7 +199,14 @@ def Receive_data(store_dict, num_file):
 
     print("declared iic_write_val")
 
+    #If you would like to use the Default values:
     iic_write_val = GBCR3_Reg1.configure_all(iic_write_val)
+
+    #If you would like to use the Different values, comment the line above and:
+    # iic_write_val = GBCR3_Reg1.configure_rx_channels(iic_write_val, ch=6, dis_chan=1)
+    # iic_write_val = GBCR3_Reg1.configure_tx(iic_write_val)
+    # iic_write_val = GBCR3_Reg1.configure_external_clock(iic_write_val)
+    # iic_write_val = GBCR3_Reg1.configure_dll(iic_write_val)
     
     print("Line 126, Written values are ", end = "")
     print_bytes_hex(iic_write_val)
