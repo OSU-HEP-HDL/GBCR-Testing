@@ -204,7 +204,7 @@ class GBCR3_Reg(object):
         return reg_value
     
 
-    def configure_rx_channels(self, iic_write_val, ch=None, **kwargs):
+    def configure_rx_channels(self, iic_write_val):
         rx_channels = [6, 5, 4, 3, 2, 1]
         
         for i in range(6):
@@ -221,29 +221,9 @@ class GBCR3_Reg(object):
             iic_write_val[4 * i + 1] = (CTLE_HFSR << 4) | CTLE_HFSR
             iic_write_val[4 * i + 2] = (CTLE_HFSR << 4) | CTLE_MFSR
             iic_write_val[4 * i + 3] = (dis_EQ_LF << 7) | (CML_AmplSel << 4) | dllClkDelay
-
-        if ch is not None:
-            if ch not in rx_channels:
-                raise ValueError("Invalid channel number. Valid channels are: {}".format(rx_channels))
-        
-            i = rx_channels.index(ch)
-            dis_chan = kwargs.get('dis_chan', self._regMap[f'Dis_Ch_BIAS_CH{ch}'])
-            disLPF = kwargs.get('disLPF', self._regMap[f'Dis_LPF_BIAS_CH{ch}'])
-            MUX_bias = kwargs.get('MUX_bias', self._regMap[f'CH{ch}_Dis_MUX_BIAS'])
-            CTLE_HFSR = kwargs.get('CTLE_HFSR', self._regMap[f'CH{ch}_EQ_HF1'])
-            CTLE_MFSR = kwargs.get('CTLE_MFSR', self._regMap[f'CH{ch}_EQ_MF'])
-            dis_EQ_LF = kwargs.get('dis_EQ_LF', self._regMap[f'Dis_EQ_LF_CH{ch}'])
-            CML_AmplSel = kwargs.get('CML_AmplSel', self._regMap[f'CH{ch}_CML_AmplSel'])
-            dllClkDelay = kwargs.get('dllClkDelay', self._regMap[f'CH{ch}_CLK_Delay'])
-
-            iic_write_val[4 * i] = (dis_chan << 6) | (disLPF << 5) | MUX_bias
-            iic_write_val[4 * i + 1] = (CTLE_HFSR << 4) | CTLE_HFSR
-            iic_write_val[4 * i + 2] = (CTLE_HFSR << 4) | CTLE_MFSR
-            iic_write_val[4 * i + 3] = (dis_EQ_LF << 7) | (CML_AmplSel << 4) | dllClkDelay
-
         return iic_write_val
 
-    def configure_tx(self, iic_write_val, ch=None, **kwargs):
+    def configure_tx(self, iic_write_val):
         tx_channels = [1, 2]
         for i in range(2):
             txSC1 = self._regMap[f'Tx_Ch{tx_channels[i]}_SC1']
@@ -257,35 +237,21 @@ class GBCR3_Reg(object):
             iic_write_val[3 * i + 24] = (txSC2 << 4) | txSC1
             iic_write_val[3 * i + 25] = (txAmp << 5) | txSR1
             iic_write_val[3 * i + 26] = (txSR2 << 2) | (disPreEmp << 1) | disTXbias
-        if ch is not None and ch in tx_channels:
-            i = tx_channels.index(ch)
-            txSC1 = kwargs.get('txSC1', self._regMap[f'Tx_Ch{ch}_SC1'])
-            txSC2 = kwargs.get('txSC2', self._regMap[f'Tx_Ch{ch}_SC2'])
-            txSR1 = kwargs.get('txSR1', self._regMap[f'Tx_Ch{ch}_SR1'])
-            txSR2 = kwargs.get('txSR2', self._regMap[f'Tx_Ch{ch}_SR2'])
-            txAmp = kwargs.get('txAmp', self._regMap[f'Tx_Ch{ch}_AmplSel'])
-            disPreEmp = kwargs.get('disPreEmp', self._regMap[f'Dis_Ch{ch}_PreEmph'])
-            disTXbias = kwargs.get('disTXbias', self._regMap[f'Dis_Ch{ch}_TxBIAS'])
-            
-            iic_write_val[3 * i + 24] = (txSC2 << 4) | txSC1
-            iic_write_val[3 * i + 25] = (txAmp << 5) | txSR1
-            iic_write_val[3 * i + 26] = (txSR2 << 2) | (disPreEmp << 1) | disTXbias
-
         return iic_write_val
 
-    def configure_external_clock(self, iic_write_val, **kwargs):
-        clk_Rx_En = kwargs.get('clk_Rx_En', self._regMap['CLK_Rx_en'])
-        dis_clk_Tx = kwargs.get('dis_clk_Tx', self._regMap['Dis_CLK_Tx'])
-        clk_Tx_Delay = kwargs.get('clk_Tx_Delay', self._regMap['CLK_Tx_Delay'])
+    def configure_external_clock(self, iic_write_val):
+        clk_Rx_En = self._regMap['CLK_Rx_en']
+        dis_clk_Tx = self._regMap['Dis_CLK_Tx']
+        clk_Tx_Delay = self._regMap['CLK_Tx_Delay']
         
         iic_write_val[30] = (clk_Rx_En << 5) | (clk_Tx_Delay << 1) | dis_clk_Tx
         return iic_write_val
 
-    def configure_dll(self, iic_write_val, **kwargs):
-        dllCapReset = kwargs.get('dllCapReset', self._regMap['Dll_CapReset'])
-        dllEnable = kwargs.get('dllEnable', self._regMap['Dll_Enable'])
-        dllForceDown = kwargs.get('dllForceDown', self._regMap['Dll_ForceDown'])
-        dllChargePumpCurrent = kwargs.get('dllChargePumpCurrent', self._regMap['Dll_CPCurrent'])
+    def configure_dll(self, iic_write_val):
+        dllCapReset = self._regMap['Dll_CapReset']
+        dllEnable = self._regMap['Dll_Enable']
+        dllForceDown = self._regMap['Dll_ForceDown']
+        dllChargePumpCurrent = self._regMap['Dll_CPCurrent']
         
         iic_write_val[31] = (dllChargePumpCurrent << 3) | (dllForceDown << 2) | (dllEnable << 1) | dllCapReset
         return iic_write_val
