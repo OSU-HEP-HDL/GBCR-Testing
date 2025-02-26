@@ -12,7 +12,6 @@ import numpy as np
 import pyvisa as visa
 from queue import Queue
 from queue import Empty
-from command_interpret import *
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
@@ -20,8 +19,9 @@ import pandas as pd
 from collections import defaultdict
 
 from GBCR3_Reg import *
-
+from command_interpret import *
 from crc32_8 import crc32_8
+
 
 import argparse
 
@@ -32,6 +32,7 @@ parser.add_argument('-d', '--debug', type=int, help='Print out the debugging mes
 args = vars(parser.parse_args())
 
 hostname = '192.168.2.'  # Fixed FPGA IP address
+
 port = 1024  # port number
 debug = False
 
@@ -39,9 +40,7 @@ debug = False
 # 
 # ------------------------------------------------------------------#
 def main():
-
     today = datetime.date.today()
-    TimeD = time.strftime("%H-%M-%S", time.localtime())
     todaystr = "QAResults_"+args["address"]
     timestr = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     try:
@@ -61,7 +60,6 @@ def main():
     store_dict = userdefine_dir
 
     Receive_data(store_dict, num_file)
-
     print(" line 56, All jobs are done!")
 
 def print_bytes_hex(data):
@@ -210,7 +208,7 @@ def Receive_data(store_dict, num_file):
     iic_write_val = [0 for i in range(32)] 
 
     print("declared iic_write_val")
-
+    
     #If you would like to use the Default values:
     iic_write_val = GBCR3_Reg1.configure_all(iic_write_val)
 
