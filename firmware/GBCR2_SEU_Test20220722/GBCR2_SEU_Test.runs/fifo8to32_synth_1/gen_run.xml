@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fifo8to32_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1719444817">
   <File Type="RDS-DCP" Name="fifo8to32.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="fifo8to32_utilization_synth.pb"/>
+  <File Type="RDS-RDS" Name="fifo8to32.vds"/>
+  <File Type="REPORTS-TCL" Name="fifo8to32_reports.tcl"/>
   <File Type="PA-TCL" Name="fifo8to32.tcl"/>
   <File Type="RDS-UTIL" Name="fifo8to32_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="fifo8to32_reports.tcl"/>
-  <File Type="RDS-RDS" Name="fifo8to32.vds"/>
+  <File Type="RDS-UTIL-PB" Name="fifo8to32_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo8to32" RelGenDir="$PGENDIR/fifo8to32">
     <File Path="$PPRDIR/ipcore_dir/fifo8to32/fifo8to32.xci">
       <FileInfo>
