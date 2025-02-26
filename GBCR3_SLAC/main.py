@@ -23,8 +23,17 @@ from GBCR3_Reg import *
 
 from crc32_8 import crc32_8
 
-hostname = '192.168.2.4'  # Fixed FPGA IP address
+import argparse
+
+parser = argparse.ArgumentParser(prog="main", formatter_class = argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('-a', '--address', help='Last digit of IP address', required=True)
+parser.add_argument('-c', '--cycles', type=int, help='Number of cycles you want to run', required=True)
+parser.add_argument('-d', '--debug', type=int, help='Print out the debugging messages', default=0, choices=[0, 1])
+args = vars(parser.parse_args())
+
+hostname = '192.168.2.'  # Fixed FPGA IP address
 port = 1024  # port number
+debug = False
 
 # ---------------------------
 # 
@@ -47,7 +56,8 @@ def main():
         os.mkdir(userdefine_dir)
     except FileExistsError:
         print("User define directories already created!!!")
-    num_file = int(sys.argv[1])  # total files will be read back
+    #num_file = int(sys.argv[1])  # total files will be read back
+    num_file = int(args["cycles"])
     store_dict = userdefine_dir
 
     Receive_data(store_dict, num_file)
@@ -63,7 +73,8 @@ def generate_summary(result_dir):
     dump_file = f"{result_dir}/ChAll.TXT"
     if os.path.exists(dump_file):
         with open(dump_file, 'r') as in_file:
-            print(f"Opened dump file: {dump_file}") 
+            if(debug):
+                print(f"Opened dump file: {dump_file}") 
             lines = in_file.readlines()
     else:
         print(f"Error in opening result file: {dump_file}")
@@ -87,12 +98,12 @@ def generate_summary(result_dir):
 
     num_line = 0
     ind_frame = 0
-    dbg = True 
+    #dbg = True 
     
 
     for line in lines:
         num_line += 1
-        if dbg:
+        if(debug):
             print(line.strip())
         if not line.strip():
             continue
@@ -213,9 +224,9 @@ def Receive_data(store_dict, num_file):
     for i in range(len(iic_write_val)):
         iic_read_val += [iic_read(0, Slave_Addr, 1, i)]
     if iic_read_val == iic_write_val:
-        print("Written =  Read: %s"%(iic_read_val))
+        print("Written =  Read: %s"%(iic_read_val)+'\n')
     else:
-        print("Written != Read: %s"%(iic_read_val))
+        print("Written != Read: %s"%(iic_read_val)+'\n')
     #end iic initilization -----------------------------------------------------------------------------------#
 
 
@@ -254,7 +265,7 @@ def Receive_data(store_dict, num_file):
             mem_data.append(0)
         mem_data.append(-1)
         if files % 10 == 0:
-            print("{} is producing {} to the queue!".format('Receive_data', files))
+            print("{} is producing {} to the queue!\n".format('Receive_data', files))
         # end if files % 10 == 0 
         exec_data(mem_data, store_dict)
         # 20220428 #for i in range(50000):
@@ -344,9 +355,10 @@ def exec_data(mem_data, store_dict):
                     cal_crc32 = cal_crc32_t
 
                 Time = datetime.datetime.now()
-                print('%s %d %d %d %d %d %08x %08x %08x %d' % (
-                    Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp,
-                    expected_code, received_code, error_position, crc32))
+                if(debug):
+                    print('%s %d %d %d %d %d %08x %08x %08x %d' % (
+                        Time, channel_id, inject_error, error_counter, cal_crc32 - crc32, time_stamp,
+                        expected_code, received_code, error_position, crc32))
                 with open("./%s/ChAll.TXT" % store_dict,
                           'a') as infile:  # # 'a': add, will not cover previous infor
                     infile.write('%s %d %d %d %d %d %08x %08x %08x %d\n' % (
@@ -372,14 +384,16 @@ def exec_data(mem_data, store_dict):
                     print("received data is filler: %x" % Rawdata)
                 if Rawdata != 0x3c5c_7c5c_0000_0000_0000_0000_1234_4321_7d6d_7a5a_0000_0000_0000_0000_5566_6655:
                     aligned = 0
-                    print("Line 276, ALignment loss Rawdata is %x" % Rawdata)
+                    if(debug):
+                        print("Line 276, ALignment loss Rawdata is %x" % Rawdata)
                 # Current frame state reevaluated
                 StatVal = 2*aligned
                 ChStat[StatVal][StatChan] = ChStat[StatVal][StatChan] + 1   
             # end if error_flag
         else:  # aligned != 1
-            if i<200:
-                print("Not aligned chan=%i  Rawdata=%x" % (StatChan,Rawdata))
+            if(debug):
+                if i<200:
+                    print("Not aligned chan=%i  Rawdata=%x" % (StatChan,Rawdata))
             while aligned == 0:
                 if i > 50000:
                     isEnd = True
@@ -407,12 +421,13 @@ def exec_data(mem_data, store_dict):
                         if isEnd==0 and remainder==1:  
                             ErrNA  = val[0]>>31&1 
                             ChanNA = val[0]>>27&0xF
-                            if ChanNA>9:
-                                print("Not aligned i=%i bad chan=%i  Rawdata=%x" % (i,ChanNA,Rawdata))
-                                ChanNA = 9
-                            else:
-                                print("Not aligned i=%i chan=%i  Rawdata=%x" % (i,ChanNA,Rawdata))
-                            #end if
+                            if(debug):
+                                if ChanNA>9:
+                                    print("Not aligned i=%i bad chan=%i  Rawdata=%x" % (i,ChanNA,Rawdata))
+                                    ChanNA = 9
+                                else:
+                                    print("Not aligned i=%i chan=%i  Rawdata=%x" % (i,ChanNA,Rawdata))
+                                #end if
                             ChStat[ErrNA][ChanNA] = ChStat[ErrNA][ChanNA] + 1 
                         #end if remainer = 1 
                     # end if
@@ -430,9 +445,10 @@ def exec_data(mem_data, store_dict):
             ChanCnt = ChanCnt + ChStat[n][m]
         #end for 
         #print non-zero channel stat
-        if ChanCnt>0:
-            print(" file summary Chan %i: Aligned Err/OK=%i/%i Not aligned Err/OK=%i/%i" % (m,ChStat[3][m],ChStat[2][m],ChStat[1][m],ChStat[0][m]))
-        #end if
+        if(debug):
+            if ChanCnt>0:
+                print(" file summary Chan %i: Aligned Err/OK=%i/%i Not aligned Err/OK=%i/%i" % (m,ChStat[3][m],ChStat[2][m],ChStat[1][m],ChStat[0][m]))
+            #end if
     #end for
     #print(" line 306 %s finished!" % self.name)
 
@@ -534,6 +550,12 @@ def iic_read(mode, slave_addr, wr, reg_addr):
 # ------------------------------------------------------------------------------------------------#
 ## if statement
 if __name__ == "__main__":
+    hostname = hostname+args["address"]
+    if(args["debug"]==1):
+        debug = True
+
+    print("Start Time: "+time.strftime("%Y/%m/%d - %H:%M:%S")+"\n")
+        
     try:  # try socket
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # initial socket
     except socket.error:
@@ -553,3 +575,5 @@ if __name__ == "__main__":
         print("Command Failed")
 
     s.close()  # close socket
+
+    print("\nEnd Time: "+time.strftime("%Y/%m/%d - %H:%M:%S")+"\n")
