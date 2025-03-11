@@ -31,7 +31,7 @@ parser.add_argument('-c', '--cycles', type=int, help='Number of cycles you want 
 parser.add_argument('-d', '--debug', type=int, help='Print out the debugging messages', default=0, choices=[0, 1])
 args = vars(parser.parse_args())
 
-hostname = '192.168.2.6'  # Fixed FPGA IP address
+hostname = '192.168.2.'  # Fixed FPGA IP address
 
 port = 1024  # port number
 debug = False
