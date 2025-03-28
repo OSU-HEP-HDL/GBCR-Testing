@@ -117,9 +117,9 @@ def main():
     # rd_val = iic_read(0, Slave_Addr, 1, regindex)
     # print("Read: %s" % (rd_val))
     # TX1
-    # iic_write_val = [0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0xFF,0xE4,0x40,0xFF,0xE4,0x40,0xF9,0x17]
+    iic_write_val_2 = [0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0xFF,0xE4,0x40,0xFF,0xE4,0x40,0xF9,0x17]
 
-    iic_write_val = [0x08, 0xBB, 0xBB, 0x75,
+    iic_write_val_3 = [0x08, 0xBB, 0xBB, 0x75,
                      0x08, 0xBB, 0xBB, 0x75,
                      0x08, 0xBB, 0xBB, 0x75,
                      0x08, 0xBB, 0xBB, 0x75,
@@ -127,6 +127,31 @@ def main():
                      0x08, 0xBB, 0xBB, 0x75,
                      0x17, 0xF9, 0x64, 0x17,
                      0xF9, 0x64, 0x21, 0x42]
+
+
+    if version == 2:
+        iic_write_val = iic_write_val_2
+    elif version == 3:
+        iic_write_val = iic_write_val_3
+    else:
+        print("Defaulting to version 3!")
+        iic_write_val = iic_write_val_3
+        return
+
+    for iic_write_index in range(32):
+        iic_write(1, Slave_Addr, 0, iic_write_index, iic_write_val[iic_write_index])
+
+    iic_read_val = []
+    lasttime = datetime.datetime.now()
+    for iic_read_index in range(32):
+        iic_read_val += [iic_read(0, Slave_Addr, 1, iic_read_index)]
+
+    if iic_read_val == iic_write_val:
+        print("%s W == R iic_read_val=" % lasttime, end="")
+        print_bytes_hex(iic_read_val)
+    else:
+        print("%s W != R iic_read_val=" % lasttime, end="")
+        print_bytes_hex(iic_read_val)
 
     for iic_write_index in range(32):
         iic_write(1, Slave_Addr, 0, iic_write_index, iic_write_val[iic_write_index])
@@ -189,29 +214,43 @@ def main():
 #------------------------------------------------------------------------------------------------#
 ## if statement
 if __name__ == "__main__":
-    if(len(sys.argv)!=2):
-        errorMessage = "Need to provide 1 agruments\n  1: Last digit in IP address"
-        print(errorMessage)
-        exit()
-    hostname+=sys.argv[-1]
-    
+
+    parser = argparse.ArgumentParser(description="Script to test GBCR2 SEU.")
+    parser.add_argument("-a", "--address", required=True, help="Last digit in IP address")
+    parser.add_argument("-v", "--version", type=int, choices=[2, 3], required=True, help="Version (2 or 3)")
+    args = parser.parse_args()
+
+    hostname += args.address
+
+    version = args.version
+    if version == 2:
+        print("GBCR2 SEU version 2")
+    elif version == 3:  
+        print("GBCR2 SEU version 3")
+    else:   
+        print("Invalid version!")
+        sys.exit()
+
     try:                                                        # try socket
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)	# initial socket
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # initial socket
     except socket.error:
         print("Failed to create socket!")
         sys.exit()
     try:                                                        # try ethernet connection
-        s.connect((hostname, port))								# connect socket
+        s.connect((hostname, port))                             # connect socket
     except socket.error:
-        print("failed to connect to ip:" + hostname)
-    cmd_interpret = command_interpret(s)					    # Class instance
+        print("Failed to connect to IP: " + hostname)
+        sys.exit()
+
+    cmd_interpret = command_interpret(s)                        # Class instance
     GBCR2_Reg1 = GBCR2_Reg()                                    # New a class
+
+    print(f"Running with version: {args.version}")
     try:
-        main()													# execute main function
+        main()                                                  # execute main function
     except KeyboardInterrupt:
         print("\nApplication exit!")
-    except:
-        print("Command Failed")
+    except Exception as e:
+        print(f"Command Failed: {e}")
     
-    s.close()												# close socket
-
+    s.close()                                                   # close socket
