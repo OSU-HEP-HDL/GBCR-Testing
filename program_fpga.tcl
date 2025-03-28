@@ -1,33 +1,42 @@
-#connect_hw_server -url localhost:3121
-#close_hw_target -verbose -quiet
-#open_hw_manager
-#current_hw_device [get_hw_devices xc7k325t_0]
-#open_hw_target
-#refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
-#set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-#set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-#set_property PROGRAM.FILE {/home/hep/GBCR-Testing/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [get_hw_devices xc7k325t_0]
-#program_hw_devices [get_hw_devices xc7k325t_0]
-#refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-
-
-
+if { $argc != 1 } {
+    puts "The program_fpga.tcl script requires one and only one argument: the location of the bitfile."
+    puts "For example: vivado -mode batch -source ./program_fpga.tcl -tclargs bitfile.bit."
+    puts "Please try again."
+    exit 1
+} else {
+    set bitfile [lindex $argv 0]
+    puts "Bit file set to $bitfile"
+}
 
 # Connect to the Digilent Cable on localhost:3121
 open_hw_manager
 connect_hw_server -url localhost:3121 -allow_non_jtag
-current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203B32A91A]
-set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210203B32A91A]
-open_hw_target
+close_hw_target
 
-# Program and Refresh the XC7K325T Device
+proc program_fpga {bitfile} {
+    foreach hw_device [get_hw_devices] {
+        puts "Found hardware device: $hw_device"
+        set_property PROGRAM.FILE $bitfile $hw_device
+        set_property PROBES.FILE {} $hw_device
+        set_property FULL_PROBES.FILE {} $hw_device
 
-current_hw_device [get_hw_devices xc7k325t_0]
+        # Program the device and check the result
+        if {[catch {program_hw_devices $hw_device} result]} {
+            puts "\033\[31mProgramming failed! Error: $result \033\[0m"
+        } else {
+            puts "\033\[32m Programming successful! \033\[0m"
+            
+        }
+        
+    }
+}
 
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
-
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/hep/GBCR-Testing/firmware/GBCR2_SEU_Test20220722/GBCR2_SEU_Test.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+foreach hw_target [get_hw_targets] {
+    puts "Opening hardware target: $hw_target"
+    current_hw_target $hw_target
+    set_property PARAM.FREQUENCY 15000000 $hw_target
+    open_hw_target $hw_target
+    puts "Current hardware target set to: [get_property NAME $hw_target]"
+    program_fpga $bitfile
+    close_hw_target $hw_target
+}
