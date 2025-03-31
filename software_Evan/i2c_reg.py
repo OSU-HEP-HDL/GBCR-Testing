@@ -10,6 +10,7 @@ import socket
 from queue import Queue
 from queue import Empty  ##
 import threading
+import argparse
 from GBCR2_Reg import *
 import pyvisa as visa
 from command_interpret import *
