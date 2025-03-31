@@ -29,6 +29,7 @@ parser = argparse.ArgumentParser(prog="main", formatter_class = argparse.Argumen
 parser.add_argument('-a', '--address', help='Last digit of IP address', required=True)
 parser.add_argument('-c', '--cycles', type=int, help='Number of cycles you want to run', required=True)
 parser.add_argument('-d', '--debug', type=int, help='Print out the debugging messages', default=0, choices=[0, 1])
+parser.add_argument("-v", "--version", type=int, choices=[2, 3], help="Version (2 or 3)")
 args = vars(parser.parse_args())
 
 hostname = '192.168.2.'  # Fixed FPGA IP address
@@ -210,7 +211,18 @@ def Receive_data(store_dict, num_file):
     print("declared iic_write_val")
     
     #If you would like to use the Default values:
-    iic_write_val = GBCR3_Reg1.configure_all(iic_write_val)
+    iic_write_val_2 = [0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0x17,0xBB,0xBB,0x75,0xFF,0xE4,0x40,0xFF,0xE4,0x40,0xF9,0x17]
+    if version == 2:
+        iic_write_val = iic_write_val_2
+    elif version == 3:
+        iic_write_val = GBCR3_Reg1.configure_all(iic_write_val)
+    else:
+        print("Defaulting to version 3!")
+        iic_write_val = GBCR3_Reg1.configure_all(iic_write_val)
+        return
+
+
+    
 
     #If you would like to use the Different values, comment the line above and:
     # iic_write_val = GBCR3_Reg1.configure_rx_channels(iic_write_val, ch=6, dis_chan=1)
@@ -556,6 +568,16 @@ def iic_read(mode, slave_addr, wr, reg_addr):
 # ------------------------------------------------------------------------------------------------#
 ## if statement
 if __name__ == "__main__":
+    version = args.version
+    if version == 2:
+        print("GBCR2 SEU version 2")
+    elif version == 3:  
+        print("GBCR2 SEU version 3")
+    else:   
+        print("Invalid version!")
+        sys.exit()
+
+
     hostname = hostname+args["address"]
     if(args["debug"]==1):
         debug = True
