@@ -568,7 +568,7 @@ def iic_read(mode, slave_addr, wr, reg_addr):
 # ------------------------------------------------------------------------------------------------#
 ## if statement
 if __name__ == "__main__":
-    version = args.version
+    version = args["version"]
     if version == 2:
         print("GBCR2 SEU version 2")
     elif version == 3:  

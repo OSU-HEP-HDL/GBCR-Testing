@@ -23,7 +23,7 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 @date: 2020-11-14
 This script is used to test GBCR2 SEU. It mainly includes I2C communication, Ethernet communication, and eight channels bit error record.
 '''
-hostname = '192.168.2.3'                # FPGA IP address
+hostname = '192.168.2.4'                # FPGA IP address
 port = 1024                             # port number
 
 #------------------------------------------------------------------------------------------------#
